@@ -1,0 +1,44 @@
+<svg width="520" height="150" viewBox="0 0 520 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Monogram background -->
+  <rect x="10" y="15" width="120" height="120" rx="28"
+        fill="#11161F"
+        stroke="#D9B45B"
+        stroke-width="2"/>
+
+  <!-- SKM monogram -->
+  <text x="28" y="94"
+        font-family="Georgia, serif"
+        font-size="55"
+        font-weight="bold"
+        fill="#F1D48A">
+    SK
+  </text>
+
+  <!-- Financial growth line -->
+  <path d="M29 111 L55 96 L76 103 L105 70"
+        stroke="#D9B45B"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <circle cx="105" cy="70" r="5" fill="#D9B45B"/>
+
+  <!-- Wordmark -->
+  <text x="155" y="67"
+        font-family="Georgia, serif"
+        font-size="32"
+        font-weight="bold"
+        fill="#F7F5EF">
+    Satyam Kumar
+  </text>
+
+  <text x="157" y="102"
+        font-family="Arial, sans-serif"
+        font-size="18"
+        letter-spacing="5"
+        fill="#D9B45B">
+    MISHRA
+  </text>
+
+</svg>
