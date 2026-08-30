@@ -6,14 +6,13 @@
 
   <meta
     name="description"
-    content="Ledgerwise Advisory — Accounting, Taxation, GST, Compliance, Company Secretary and Financial Advisory services."
+    content="Ledgerwise Advisory — Accounting, Tax, GST, Compliance and Financial Advisory services by Satyam Kumar Mishra."
   >
 
   <meta name="theme-color" content="#F7F3EA">
 
-  <title>Ledgerwise Advisory | Accounting, Tax & Compliance</title>
+  <title>Ledgerwise Advisory | Accounting · Tax · Compliance</title>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -50,9 +49,6 @@
       --mono: "IBM Plex Mono", monospace;
     }
 
-
-    /* RESET */
-
     * {
       margin: 0;
       padding: 0;
@@ -77,10 +73,8 @@
       inset: 0;
       z-index: 999;
       pointer-events: none;
-
       opacity: 0.035;
       mix-blend-mode: multiply;
-
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     }
 
@@ -101,17 +95,16 @@
       font-family: inherit;
     }
 
-
-    /* NAVIGATION */
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
 
     nav {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-
       height: 82px;
-
       z-index: 100;
 
       display: flex;
@@ -121,7 +114,6 @@
       padding: 0 6vw;
 
       background: rgba(247,243,234,0.82);
-
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
 
@@ -162,21 +154,17 @@
     .brand-sub {
       margin-top: 7px;
       font-family: var(--mono);
-      font-size: 9px;
-      letter-spacing: 2.5px;
+      font-size: 8.5px;
+      letter-spacing: 1.8px;
       color: var(--ink-faint);
     }
 
     .nav-links {
       list-style: none;
-
       display: flex;
       align-items: center;
-
       gap: 38px;
-
       color: var(--ink-soft);
-
       font-size: 14.5px;
     }
 
@@ -209,18 +197,12 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-
       padding: 12px 21px;
-
       background: var(--navy);
-
       border-radius: 3px;
-
       color: var(--paper);
-
       font-size: 13.5px;
       font-weight: 500;
-
       transition: all 0.3s ease;
     }
 
@@ -232,17 +214,12 @@
 
     .nav-toggle {
       display: none;
-
       width: 34px;
       height: 34px;
-
       border: 1px solid var(--line);
       border-radius: 3px;
-
       background: transparent;
-
       cursor: pointer;
-
       position: relative;
     }
 
@@ -282,12 +259,12 @@
       transform: translateY(-6px) rotate(-45deg);
     }
 
-
-    /* HERO */
+    /* =========================================================
+       HERO
+    ========================================================= */
 
     .hero {
       position: relative;
-
       min-height: 100vh;
 
       display: grid;
@@ -336,7 +313,6 @@
     .hero-content {
       position: relative;
       z-index: 5;
-
       max-width: 620px;
     }
 
@@ -406,7 +382,6 @@
       font-weight: 600;
 
       transition: all 0.3s ease;
-
       cursor: pointer;
     }
 
@@ -437,20 +412,18 @@
     }
 
     .btn-whatsapp {
-      border: 1px solid rgba(63,122,87,0.3);
-      color: var(--green);
-      background: rgba(63,122,87,0.05);
+      background: #237B4B;
+      border-color: #237B4B;
+      color: white;
     }
 
     .btn-whatsapp:hover {
-      border-color: var(--green);
-      background: var(--green);
+      background: #1D663E;
+      border-color: #1D663E;
       color: white;
-      transform: translateY(-3px);
     }
 
-
-    /* HERO GRAPHIC */
+    /* Hero graphic */
 
     .hero-graphic {
       position: relative;
@@ -551,8 +524,9 @@
       background: var(--ink-faint);
     }
 
-
-    /* COMMON SECTION */
+    /* =========================================================
+       COMMON SECTION
+    ========================================================= */
 
     section {
       position: relative;
@@ -592,13 +566,14 @@
     .section-subtitle {
       color: var(--ink-soft);
       line-height: 1.8;
-      max-width: 600px;
+      max-width: 720px;
       margin-top: 20px;
       font-size: 15.5px;
     }
 
-
-    /* PRINCIPLES */
+    /* =========================================================
+       PRINCIPLES
+    ========================================================= */
 
     .principles {
       background: var(--paper-alt);
@@ -641,44 +616,9 @@
       line-height: 1.7;
     }
 
-
-    /* EXPERIENCE */
-
-    .experience {
-      background: var(--paper);
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1px;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      padding: 0 6vw;
-    }
-
-    .experience-item {
-      padding: 46px 30px;
-      text-align: center;
-      background: var(--paper);
-    }
-
-    .experience-number {
-      display: block;
-      font-family: var(--serif);
-      font-size: clamp(34px, 4vw, 52px);
-      line-height: 1;
-      color: var(--brass);
-      margin-bottom: 10px;
-    }
-
-    .experience-label {
-      font-size: 12px;
-      font-family: var(--mono);
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
-      color: var(--ink-soft);
-    }
-
-
-    /* SKYLINE */
+    /* =========================================================
+       SKYLINE
+    ========================================================= */
 
     .skyline-banner {
       position: relative;
@@ -707,7 +647,7 @@
     .skyline-quote {
       position: relative;
       z-index: 2;
-      max-width: 780px;
+      max-width: 850px;
     }
 
     .skyline-quote p {
@@ -723,41 +663,91 @@
     .skyline-quote span {
       display: block;
       margin-top: 24px;
+
       font-family: var(--mono);
       font-size: 11px;
       letter-spacing: 2.5px;
       text-transform: uppercase;
+
       color: var(--brass-light);
     }
 
-
-    /* SERVICES */
+    /* =========================================================
+       SERVICES
+    ========================================================= */
 
     .services {
       background: var(--paper);
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
+
+    .services-intro {
+      max-width: 1100px;
+      margin-bottom: 75px;
+
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 90px;
+
+      align-items: start;
+    }
+
+    .services-intro-copy {
+      max-width: 540px;
+      padding-top: 8px;
+    }
+
+    .services-intro-copy p {
+      color: var(--ink-soft);
+      font-size: 16px;
+      line-height: 1.9;
+      margin: 0;
+    }
+
+    .services-note {
+      margin-top: 34px;
+      padding: 20px 0 20px 28px;
+
+      border-left: 2px solid var(--brass);
+
+      color: var(--ink-soft);
+      font-family: var(--serif);
+      font-size: 21px;
+      line-height: 1.6;
+
+      max-width: 500px;
     }
 
     .service-grid {
-      margin-top: 60px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1px;
+
       background: var(--line);
       border: 1px solid var(--line);
     }
 
     .service-card {
-      min-height: 270px;
+      min-height: 310px;
       padding: 36px 32px;
       position: relative;
 
       background: var(--paper-card);
 
-      transition: background 0.3s ease, transform 0.15s ease;
+      display: flex;
+      flex-direction: column;
+
+      transition:
+        background 0.3s ease,
+        transform 0.15s ease,
+        box-shadow 0.3s ease;
     }
 
     .service-card:hover {
       background: #FFFDF8;
+      box-shadow: 0 18px 45px rgba(18,27,46,0.08);
+      z-index: 2;
     }
 
     .service-icon {
@@ -794,74 +784,444 @@
       font-size: 14px;
     }
 
-    .service-whatsapp {
-      display: inline-flex;
-      margin-top: 20px;
-      color: var(--green);
-      font-size: 12px;
-      font-weight: 600;
+    .service-link {
+      margin-top: auto;
+      padding-top: 25px;
+
+      color: var(--brass);
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
 
-
-    /* ABOUT */
+    /* =========================================================
+       ABOUT / EXPERIENCE
+    ========================================================= */
 
     .about {
       background: var(--paper-alt);
+      padding-top: 140px;
+      padding-bottom: 140px;
+    }
 
-      display: block;
+    .about-layout {
+      max-width: 1250px;
+      margin: 0 auto;
 
-      padding-left: 10vw;
-      padding-right: 10vw;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 90px;
+      align-items: center;
+    }
+
+    .about-visual {
+      position: relative;
+      min-height: 520px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Premium accountancy illustration */
+
+    .accounting-art {
+      width: min(470px, 100%);
+      aspect-ratio: 4 / 5;
+
+      position: relative;
+      overflow: hidden;
+
+      border: 1px solid var(--line);
+      border-radius: 6px;
+
+      background:
+        radial-gradient(
+          circle at 75% 15%,
+          rgba(169,120,47,0.18),
+          transparent 40%
+        ),
+        linear-gradient(
+          145deg,
+          #F4EDDD,
+          #E2D4B1
+        );
+
+      box-shadow:
+        0 35px 70px rgba(18,27,46,0.12);
+    }
+
+    .accounting-art::before {
+      content: "";
+      position: absolute;
+      inset: 28px;
+
+      border: 1px solid rgba(169,120,47,0.28);
+      border-radius: 4px;
+    }
+
+    .art-document {
+      position: absolute;
+      width: 55%;
+      height: 64%;
+
+      left: 15%;
+      top: 16%;
+
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(27,31,39,0.12);
+
+      transform: rotate(-6deg);
+
+      box-shadow: 18px 20px 35px rgba(18,27,46,0.12);
+    }
+
+    .art-document::before {
+      content: "";
+      position: absolute;
+      left: 14%;
+      right: 14%;
+      top: 18%;
+      height: 4px;
+
+      background: var(--navy);
+
+      box-shadow:
+        0 22px 0 rgba(27,31,39,0.13),
+        0 44px 0 rgba(27,31,39,0.13),
+        0 66px 0 rgba(27,31,39,0.13),
+        0 88px 0 rgba(27,31,39,0.13);
+    }
+
+    .art-document::after {
+      content: "₹";
+
+      position: absolute;
+      right: 14%;
+      bottom: 14%;
+
+      width: 42px;
+      height: 42px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: var(--brass);
+      color: var(--paper);
+
+      font-family: var(--serif);
+      font-size: 20px;
+    }
+
+    .art-chart {
+      position: absolute;
+      right: 10%;
+      bottom: 15%;
+
+      width: 55%;
+      height: 36%;
+
+      padding: 20px;
+
+      background: var(--navy);
+
+      border: 1px solid var(--brass);
+      box-shadow: 15px 18px 30px rgba(18,27,46,0.18);
+    }
+
+    .art-chart svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .art-caption {
+      position: absolute;
+      left: 35px;
+      bottom: 28px;
+
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      color: var(--brass);
     }
 
     .about-content {
-      max-width: 850px;
-      margin: 0 auto;
+      max-width: 650px;
     }
 
-    .about-content p {
+    .about-content > p {
       color: var(--ink-soft);
-      line-height: 1.85;
-      margin: 24px 0;
-      max-width: 700px;
+      line-height: 1.9;
+      margin: 26px 0;
+      max-width: 600px;
+      font-size: 15.5px;
     }
 
-    .about-intro {
-      font-size: 16px;
+    .about-highlight {
+      margin-top: 30px;
+      padding: 22px 24px;
+
+      border-left: 2px solid var(--brass);
+      background: rgba(255,255,255,0.48);
+
+      font-family: var(--serif);
+      font-size: 20px;
+      line-height: 1.55;
+      color: var(--ink);
     }
+
+    /* Interactive quality cards */
 
     .qualities {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px;
-      margin-top: 28px;
-      max-width: 700px;
+      margin-top: 30px;
+
+      align-items: start;
     }
 
     .quality {
-      padding: 17px 18px;
+      position: relative;
+
+      min-height: 0;
+
+      padding: 18px;
+
       border: 1px solid var(--line);
       border-radius: 4px;
+
       background: var(--paper-card);
+
       color: var(--ink);
       font-size: 13.5px;
+
+      cursor: pointer;
+
+      align-self: start;
+
+      transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
     }
 
-    .quality span {
+    .quality:hover,
+    .quality.active {
+      border-color: var(--brass);
+      background: #FFFDF8;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(18,27,46,0.07);
+    }
+
+    .quality-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .quality-title {
+      font-weight: 600;
+    }
+
+    .quality-mark {
       color: var(--green);
-      margin-right: 8px;
       font-family: var(--mono);
+      font-size: 13px;
     }
 
+    .quality-arrow {
+      color: var(--brass);
+      font-size: 16px;
+      transition: transform 0.25s ease;
+    }
 
-    /* CTA */
+    .quality.active .quality-arrow {
+      transform: rotate(90deg);
+    }
+
+    .quality-detail {
+      max-height: 0;
+      overflow: hidden;
+
+      color: var(--ink-soft);
+      font-size: 12.5px;
+      line-height: 1.65;
+
+      transition: max-height 0.35s ease, margin-top 0.35s ease;
+    }
+
+    .quality.active .quality-detail {
+      max-height: 100px;
+      margin-top: 11px;
+    }
+
+    /* Experience */
+
+    .experience {
+      margin-top: 110px;
+      padding-top: 90px;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .experience-heading {
+      max-width: 760px;
+      margin-bottom: 45px;
+    }
+
+    .experience-heading p {
+      color: var(--ink-soft);
+      line-height: 1.8;
+      margin-top: 20px;
+      max-width: 650px;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 70px;
+      align-items: stretch;
+    }
+
+    .experience-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .stat-card {
+      min-height: 190px;
+
+      padding: 28px;
+
+      background: var(--paper-card);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      transition: 0.3s ease;
+    }
+
+    .stat-card:hover {
+      background: #FFFDF8;
+    }
+
+    .stat-number {
+      font-family: var(--serif);
+      font-size: 52px;
+      line-height: 1;
+      color: var(--brass);
+      margin-bottom: 12px;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .stat-description {
+      margin-top: 7px;
+      color: var(--ink-soft);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .experience-process {
+      display: grid;
+      gap: 0;
+    }
+
+    .process-step {
+      position: relative;
+
+      display: grid;
+      grid-template-columns: 55px 1fr;
+      gap: 20px;
+
+      padding: 0 0 34px;
+    }
+
+    .process-step:last-child {
+      padding-bottom: 0;
+    }
+
+    .process-step::after {
+      content: "";
+
+      position: absolute;
+      left: 13px;
+      top: 28px;
+      bottom: 0;
+
+      width: 1px;
+      background: var(--line);
+    }
+
+    .process-step:last-child::after {
+      display: none;
+    }
+
+    .process-number {
+      width: 28px;
+      height: 28px;
+
+      display: grid;
+      place-items: center;
+
+      border: 1px solid var(--brass);
+      border-radius: 50%;
+
+      color: var(--brass);
+      font-family: var(--mono);
+      font-size: 10px;
+
+      background: var(--paper-alt);
+
+      position: relative;
+      z-index: 2;
+    }
+
+    .process-content h3 {
+      font-family: var(--serif);
+      font-size: 21px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .process-content p {
+      color: var(--ink-soft);
+      font-size: 13.5px;
+      line-height: 1.7;
+      max-width: 500px;
+    }
+
+    /* =========================================================
+       CTA
+    ========================================================= */
 
     .cta {
       text-align: center;
       overflow: hidden;
 
       background:
-        radial-gradient(circle at 50% 0%, rgba(200,154,79,0.16), transparent 50%),
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(200,154,79,0.16),
+          transparent 50%
+        ),
         var(--navy);
 
       color: var(--paper);
@@ -899,8 +1259,9 @@
       border-color: var(--brass-light);
     }
 
-
-    /* CONTACT */
+    /* =========================================================
+       CONTACT
+    ========================================================= */
 
     .contact {
       display: grid;
@@ -945,8 +1306,9 @@
       font-size: 15px;
     }
 
-
-    /* CONTACT FORM */
+    /* =========================================================
+       FORM
+    ========================================================= */
 
     .contact-form {
       padding: 38px;
@@ -1014,6 +1376,20 @@
       margin-top: 6px;
     }
 
+    .whatsapp-form-btn {
+      width: 100%;
+      margin-top: 10px;
+      border: 1px solid #237B4B;
+      background: transparent;
+      color: #237B4B;
+    }
+
+    .whatsapp-form-btn:hover {
+      background: #237B4B;
+      color: white;
+      transform: translateY(-2px);
+    }
+
     #formStatus {
       margin-top: 15px;
       color: var(--green);
@@ -1022,31 +1398,21 @@
       display: none;
     }
 
-    .whatsapp-form-btn {
-      display: none;
-      width: 100%;
-      margin-top: 12px;
-      background: #25D366;
-      color: white;
-      border: 1px solid #25D366;
-    }
-
-    .whatsapp-form-btn:hover {
-      background: #1ebe5d;
-      border-color: #1ebe5d;
-      color: white;
-    }
-
-
-    /* FOOTER */
+    /* =========================================================
+       FOOTER
+    ========================================================= */
 
     footer {
       padding: 36px 6vw;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       color: var(--ink-faint);
+
       border-top: 1px solid var(--line);
+
       font-size: 12.5px;
     }
 
@@ -1055,10 +1421,11 @@
       font-weight: 500;
     }
 
+    /* =========================================================
+       FLOATING CONTACT BUTTONS
+    ========================================================= */
 
-    /* FLOATING CONTACT BUTTONS */
-
-    .floating-actions {
+    .floating-contacts {
       position: fixed;
       right: 26px;
       bottom: 26px;
@@ -1066,7 +1433,7 @@
 
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
     }
 
     .floating-contact {
@@ -1077,40 +1444,81 @@
       display: grid;
       place-items: center;
 
-      font-size: 20px;
+      box-shadow: 0 10px 30px rgba(18,27,46,0.25);
 
-      box-shadow: 0 10px 30px rgba(18,27,46,0.28);
       transition: 0.3s;
+
+      position: relative;
     }
 
-    .floating-phone {
+    .floating-contact:hover {
+      transform: scale(1.08);
+    }
+
+    .floating-call {
       background: var(--navy);
       color: var(--brass-light);
+      font-size: 20px;
     }
 
-    .floating-phone:hover {
-      transform: scale(1.08);
+    .floating-call:hover {
       background: var(--brass);
       color: var(--navy);
     }
 
     .floating-whatsapp {
-      background: #25D366;
+      background: #237B4B;
       color: white;
+      font-size: 23px;
     }
 
     .floating-whatsapp:hover {
-      transform: scale(1.08);
-      background: #1ebe5d;
+      background: #1D663E;
+      color: white;
     }
 
+    .floating-contact[data-tooltip]::after {
+      content: attr(data-tooltip);
 
-    /* REVEAL */
+      position: absolute;
+      right: 68px;
+
+      white-space: nowrap;
+
+      padding: 7px 10px;
+
+      background: var(--navy);
+      color: var(--paper);
+
+      border-radius: 3px;
+
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.5px;
+
+      opacity: 0;
+      pointer-events: none;
+
+      transform: translateX(5px);
+
+      transition: 0.2s;
+    }
+
+    .floating-contact[data-tooltip]:hover::after {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* =========================================================
+       REVEAL
+    ========================================================= */
 
     .reveal {
       opacity: 0;
       transform: translateY(28px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
     }
 
     .reveal.visible {
@@ -1118,8 +1526,38 @@
       transform: translateY(0);
     }
 
+    /* =========================================================
+       ACCESSIBILITY
+    ========================================================= */
 
-    /* RESPONSIVE */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible,
+    select:focus-visible,
+    .quality:focus-visible {
+      outline: 2px solid var(--brass);
+      outline-offset: 2px;
+    }
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 1100px) {
+
+      .services-intro {
+        gap: 45px;
+      }
+
+      .about-layout {
+        gap: 55px;
+      }
+
+      .experience-grid {
+        gap: 40px;
+      }
+    }
 
     @media (max-width: 950px) {
 
@@ -1170,6 +1608,39 @@
         grid-template-columns: 1fr 1fr;
       }
 
+      .services-intro {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-bottom: 55px;
+      }
+
+      .services-intro-copy {
+        max-width: 620px;
+        padding-top: 0;
+      }
+
+      .services-note {
+        margin-top: 30px;
+        max-width: 600px;
+      }
+
+      .about-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .about-visual {
+        min-height: auto;
+        margin-bottom: 15px;
+      }
+
+      .about-content {
+        max-width: 100%;
+      }
+
+      .experience-grid {
+        grid-template-columns: 1fr;
+      }
+
       .contact {
         grid-template-columns: 1fr;
       }
@@ -1188,9 +1659,7 @@
         min-height: 260px;
         padding: 70px 5vw;
       }
-
     }
-
 
     @media (max-width: 620px) {
 
@@ -1209,7 +1678,7 @@
 
       .brand-sub {
         font-size: 7px;
-        letter-spacing: 1.5px;
+        letter-spacing: 1.2px;
       }
 
       .nav-cta {
@@ -1233,36 +1702,68 @@
         padding: 85px 5vw;
       }
 
+      .services {
+        padding-top: 90px;
+        padding-bottom: 90px;
+      }
+
+      .services-intro {
+        gap: 26px;
+        margin-bottom: 45px;
+      }
+
+      .services-intro-copy p {
+        font-size: 15px;
+        line-height: 1.8;
+      }
+
+      .services-note {
+        margin-top: 26px;
+        padding: 16px 0 16px 20px;
+        font-size: 19px;
+        line-height: 1.55;
+      }
+
       .service-grid {
         grid-template-columns: 1fr;
       }
 
       .qualities,
-      .form-row {
+      .form-row,
+      .experience-stats {
         grid-template-columns: 1fr;
-      }
-
-      .experience {
-        grid-template-columns: 1fr;
-        padding: 0 5vw;
-      }
-
-      .experience-item {
-        padding: 34px 15px;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .experience-item:last-child {
-        border-bottom: 0;
       }
 
       .about {
-        padding-left: 5vw;
-        padding-right: 5vw;
+        padding-top: 90px;
+        padding-bottom: 90px;
       }
 
-      .contact-form {
-        padding: 25px 20px;
+      .accounting-art {
+        width: 92%;
+      }
+
+      .experience {
+        margin-top: 80px;
+        padding-top: 70px;
+      }
+
+      .stat-card {
+        min-height: 160px;
+      }
+
+      .floating-contacts {
+        right: 17px;
+        bottom: 17px;
+      }
+
+      .floating-contact {
+        width: 51px;
+        height: 51px;
+      }
+
+      .floating-contact[data-tooltip]::after {
+        display: none;
       }
 
       footer {
@@ -1270,29 +1771,6 @@
         gap: 10px;
         text-align: center;
       }
-
-      .floating-actions {
-        right: 18px;
-        bottom: 18px;
-      }
-
-      .floating-contact {
-        width: 52px;
-        height: 52px;
-      }
-
-    }
-
-
-    /* ACCESSIBILITY */
-
-    a:focus-visible,
-    button:focus-visible,
-    input:focus-visible,
-    textarea:focus-visible,
-    select:focus-visible {
-      outline: 2px solid var(--brass);
-      outline-offset: 2px;
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1313,11 +1791,11 @@
   </style>
 </head>
 
-
 <body>
 
-
-  <!-- NAVIGATION -->
+  <!-- =========================================================
+       NAVIGATION
+  ========================================================= -->
 
   <nav>
 
@@ -1403,32 +1881,22 @@
 
       </svg>
 
-
       <div class="brand-text">
-
         <div class="brand-name">Ledgerwise Advisory</div>
-
-        <div class="brand-sub">
-          ACCOUNTING · TAX · COMPLIANCE
-        </div>
-
+        <div class="brand-sub">ACCOUNTING · TAX · COMPLIANCE</div>
       </div>
 
     </a>
 
-
     <ul class="nav-links" id="navLinks">
       <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
 
-
     <div style="display:flex; align-items:center; gap:14px;">
-
-      <a href="#contact" class="nav-cta">
-        Let's Talk
-      </a>
+      <a href="#contact" class="nav-cta">Let's Talk</a>
 
       <button
         class="nav-toggle"
@@ -1438,22 +1906,20 @@
       >
         <span></span>
       </button>
-
     </div>
 
   </nav>
 
 
-
-  <!-- HERO -->
+  <!-- =========================================================
+       HERO
+  ========================================================= -->
 
   <header class="hero">
 
     <div class="hero-content reveal">
 
-      <div class="eyebrow">
-        FINANCIAL &amp; BUSINESS SUPPORT
-      </div>
+      <div class="eyebrow">Financial & Business Support</div>
 
       <h1>
         Numbers made<br>
@@ -1472,25 +1938,23 @@
           Book a Consultation →
         </a>
 
-        <a href="#services" class="btn btn-secondary">
-          Explore Services
-        </a>
-
         <a
           href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20discuss%20your%20accounting%2C%20tax%20or%20compliance%20services."
-          class="btn btn-whatsapp"
           target="_blank"
           rel="noopener noreferrer"
+          class="btn btn-whatsapp"
         >
-          WhatsApp Us
+          WhatsApp →
+        </a>
+
+        <a href="#services" class="btn btn-secondary">
+          Explore Services
         </a>
 
       </div>
 
     </div>
 
-
-    <!-- HERO GRAPHIC -->
 
     <div class="hero-graphic" id="heroGraphic">
 
@@ -1522,8 +1986,16 @@
             x2="0"
             y2="1"
           >
-            <stop offset="0%" stop-color="#C89A4F" stop-opacity="0.16" />
-            <stop offset="100%" stop-color="#C89A4F" stop-opacity="0" />
+            <stop
+              offset="0%"
+              stop-color="#C89A4F"
+              stop-opacity="0.16"
+            />
+            <stop
+              offset="100%"
+              stop-color="#C89A4F"
+              stop-opacity="0"
+            />
           </linearGradient>
         </defs>
 
@@ -1561,7 +2033,7 @@
           cx="540"
           cy="90"
           r="6"
-          style="animation-delay:2.0s"
+          style="animation-delay:2s"
         />
 
         <text
@@ -1595,24 +2067,22 @@
 
     </div>
 
-
-    <div class="scroll-hint">
-      Scroll to explore
-    </div>
+    
 
   </header>
 
 
-
-  <!-- PRINCIPLES -->
+  <!-- =========================================================
+       PRINCIPLES
+  ========================================================= -->
 
   <section class="principles">
 
     <div class="principle reveal">
-      <div class="principle-mark">§</div>
+      <div class="principle-mark">✦</div>
       <div class="principle-title">Personal Attention</div>
       <div class="principle-copy">
-        Every filing and figure reviewed directly — never handed off to a queue.
+        Every filing and figure is reviewed directly, never handed off to a queue.
       </div>
     </div>
 
@@ -1620,7 +2090,8 @@
       <div class="principle-mark">%</div>
       <div class="principle-title">Professional Approach</div>
       <div class="principle-copy">
-        Structured processes for compliance, documentation and reporting, done right the first time.
+        Structured processes for compliance, documentation and
+        reporting, done right the first time.
       </div>
     </div>
 
@@ -1628,48 +2099,16 @@
       <div class="principle-mark">→</div>
       <div class="principle-title">Clear Guidance</div>
       <div class="principle-copy">
-        Plain explanations of what a number means and what to do about it — no jargon.
+        Plain explanations of what each number means and what to do about it, with no jargon.
       </div>
     </div>
 
   </section>
 
 
-
-  <!-- EXPERIENCE -->
-
-  <section class="experience">
-
-    <div class="experience-item reveal">
-
-      <span class="experience-number">
-        3+
-      </span>
-
-      <span class="experience-label">
-        Years Experience
-      </span>
-
-    </div>
-
-
-    <div class="experience-item reveal">
-
-      <span class="experience-number">
-        30+
-      </span>
-
-      <span class="experience-label">
-        Clients Served
-      </span>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- SKYLINE -->
+  <!-- =========================================================
+       SKYLINE
+  ========================================================= -->
 
   <section class="skyline-banner">
 
@@ -1692,6 +2131,7 @@
       />
 
       <g fill="#C89A4F">
+
         <rect x="15" y="140" width="55" height="120" opacity="0.14" />
         <rect x="85" y="80" width="42" height="180" opacity="0.20" />
         <rect x="140" y="170" width="65" height="90" opacity="0.12" />
@@ -1710,47 +2150,60 @@
         <rect x="1135" y="35" width="98" height="225" opacity="0.22" />
         <rect x="1248" y="120" width="55" height="140" opacity="0.14" />
         <rect x="1315" y="90" width="50" height="170" opacity="0.17" />
+
       </g>
 
     </svg>
-
 
     <div class="skyline-quote reveal">
 
       <p>
         Every business runs on paperwork most owners never see.
-        My job is to make sure it never becomes the reason something goes wrong.
+        My job is to make sure it never becomes the reason
+        something goes wrong.
       </p>
 
-      <span>
-        — Satyam Kumar Mishra
-      </span>
+      <span>— Satyam Kumar Mishra</span>
 
     </div>
 
   </section>
 
 
-
-  <!-- SERVICES -->
+  <!-- =========================================================
+       SERVICES
+  ========================================================= -->
 
   <section class="services" id="services">
 
-    <div class="reveal">
+    <div class="services-intro reveal">
 
-      <div class="section-label">
-        What I Do
+      <div>
+
+        <div class="section-label">
+          What I Do
+        </div>
+
+        <h2 class="section-title">
+          Professional services for every stage of your financial journey.
+        </h2>
+
       </div>
 
-      <h2 class="section-title">
-        Professional services for your financial journey.
-      </h2>
+      <div class="services-intro-copy">
 
-      <p class="section-subtitle">
-        From everyday accounting to taxation and corporate
-        compliance, get practical support for the things that
-        matter to your business.
-      </p>
+        <p>
+          From everyday accounting to taxation, GST and corporate
+          compliance, the focus is simple: keep your financial
+          responsibilities organized, understandable and on track.
+        </p>
+
+        <div class="services-note">
+          Good financial management isn't just about keeping
+          records. It's about knowing what those records mean.
+        </div>
+
+      </div>
 
     </div>
 
@@ -1761,23 +2214,16 @@
 
         <div class="service-icon">▤</div>
 
-        <h3>
-          Accounting &amp; Bookkeeping
-        </h3>
+        <h3>Accounting & Bookkeeping</h3>
 
         <p>
           Organized bookkeeping, ledger management, reconciliation,
           financial statements and reporting support.
         </p>
 
-        <a
-          class="service-whatsapp"
-          href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20Accounting%20%26%20Bookkeeping%20services."
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ask on WhatsApp →
-        </a>
+        <div class="service-link">
+          Financial Records →
+        </div>
 
       </article>
 
@@ -1786,23 +2232,16 @@
 
         <div class="service-icon">₹</div>
 
-        <h3>
-          Income Tax
-        </h3>
+        <h3>Income Tax</h3>
 
         <p>
-          Income tax return filing, tax computation, planning
-          and assistance with tax-related notices and compliance.
+          Income tax return filing, tax computation, planning and
+          assistance with tax-related notices and compliance.
         </p>
 
-        <a
-          class="service-whatsapp"
-          href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20Income%20Tax%20services."
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ask on WhatsApp →
-        </a>
+        <div class="service-link">
+          Tax Support →
+        </div>
 
       </article>
 
@@ -1811,23 +2250,16 @@
 
         <div class="service-icon">%</div>
 
-        <h3>
-          GST Services
-        </h3>
+        <h3>GST Services</h3>
 
         <p>
-          GST registration, return filing, reconciliation
-          and ongoing GST compliance support.
+          GST registration, return filing, reconciliation and
+          ongoing GST compliance support.
         </p>
 
-        <a
-          class="service-whatsapp"
-          href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20GST%20services."
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ask on WhatsApp →
-        </a>
+        <div class="service-link">
+          GST Compliance →
+        </div>
 
       </article>
 
@@ -1836,23 +2268,16 @@
 
         <div class="service-icon">✓</div>
 
-        <h3>
-          Audit &amp; Assurance
-        </h3>
+        <h3>Audit & Assurance</h3>
 
         <p>
           Tax audit, financial statement review, audit support
           and professional certification services.
         </p>
 
-        <a
-          class="service-whatsapp"
-          href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20Audit%20%26%20Assurance%20services."
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ask on WhatsApp →
-        </a>
+        <div class="service-link">
+          Review & Assurance →
+        </div>
 
       </article>
 
@@ -1861,23 +2286,16 @@
 
         <div class="service-icon">⌘</div>
 
-        <h3>
-          Company Secretary Services
-        </h3>
+        <h3>Company Secretary Services</h3>
 
         <p>
           Company incorporation support, ROC-related compliance,
           statutory filings and corporate documentation.
         </p>
 
-        <a
-          class="service-whatsapp"
-          href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20Company%20Secretary%20services."
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ask on WhatsApp →
-        </a>
+        <div class="service-link">
+          Corporate Compliance →
+        </div>
 
       </article>
 
@@ -1886,23 +2304,16 @@
 
         <div class="service-icon">↗</div>
 
-        <h3>
-          Financial Advisory
-        </h3>
+        <h3>Financial Advisory</h3>
 
         <p>
           Financial planning, business analysis, cash-flow planning
           and practical financial guidance.
         </p>
 
-        <a
-          class="service-whatsapp"
-          href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20Financial%20Advisory%20services."
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ask on WhatsApp →
-        </a>
+        <div class="service-link">
+          Advisory →
+        </div>
 
       </article>
 
@@ -1911,55 +2322,394 @@
   </section>
 
 
-
-  <!-- ABOUT -->
+  <!-- =========================================================
+       ABOUT + EXPERIENCE
+  ========================================================= -->
 
   <section class="about" id="about">
 
-    <div class="about-content reveal">
+    <div class="about-layout">
 
-      <div class="section-label">
-        About
+      <div class="about-visual reveal">
+
+        <div class="accounting-art">
+
+          <div class="art-document"></div>
+
+          <div class="art-chart">
+
+            <svg
+              viewBox="0 0 250 130"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+
+              <g
+                stroke="#E7CE9C"
+                stroke-opacity="0.15"
+                stroke-width="1"
+              >
+                <line x1="0" y1="25" x2="250" y2="25" />
+                <line x1="0" y1="55" x2="250" y2="55" />
+                <line x1="0" y1="85" x2="250" y2="85" />
+                <line x1="0" y1="115" x2="250" y2="115" />
+              </g>
+
+              <path
+                d="M10 105 L55 90 L90 96 L130 65 L170 74 L210 28 L240 18"
+                fill="none"
+                stroke="#C89A4F"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+              <circle
+                cx="240"
+                cy="18"
+                r="4"
+                fill="#E7CE9C"
+              />
+
+            </svg>
+
+          </div>
+
+          <div class="art-caption">
+            Structured · Accurate · On Track
+          </div>
+
+        </div>
+
       </div>
 
-      <h2 class="section-title">
-        Clear numbers.<br>
-        Better decisions.
-      </h2>
 
-      <p class="about-intro">
-        Satyam Kumar Mishra provides professional accounting,
-        taxation, compliance and business support services with
-        a focus on accuracy, transparency and practical guidance.
-      </p>
+      <div class="about-content reveal">
 
-      <p>
-        With over 3 years of experience, he has supported
-        30+ clients with accounting, taxation, GST, compliance
-        and financial requirements.
-      </p>
-
-
-      <div class="qualities">
-
-        <div class="quality">
-          <span>›</span>
-          Reliable Support
+        <div class="section-label">
+          About
         </div>
 
-        <div class="quality">
-          <span>›</span>
-          Transparent Process
+        <h2 class="section-title">
+          Clear numbers.<br>
+          Better decisions.
+        </h2>
+
+        <p>
+          Ledgerwise Advisory provides professional accounting,
+          taxation, compliance and business support with a focus
+          on accuracy, transparency and practical guidance.
+        </p>
+
+        <p>
+          Led by Satyam Kumar Mishra, the approach is deliberately
+          personal: understand the requirement, organize the
+          details, explain what matters and keep the important
+          responsibilities moving forward.
+        </p>
+
+        <div class="about-highlight">
+          “The goal isn't simply to complete paperwork. It's to
+          give business owners confidence that the important
+          details are being taken care of.”
         </div>
 
-        <div class="quality">
-          <span>›</span>
-          Personalized Service
+
+        <div class="qualities">
+
+          <div
+            class="quality"
+            tabindex="0"
+            role="button"
+            aria-expanded="false"
+          >
+
+            <div class="quality-head">
+
+              <div>
+                <span class="quality-mark">›</span>
+                <span class="quality-title">
+                  Reliable Support
+                </span>
+              </div>
+
+              <span class="quality-arrow">→</span>
+
+            </div>
+
+            <div class="quality-detail">
+              Consistent assistance for accounting, filings and
+              financial responsibilities, so important tasks don't
+              get lost in the day-to-day running of a business.
+            </div>
+
+          </div>
+
+
+          <div
+            class="quality"
+            tabindex="0"
+            role="button"
+            aria-expanded="false"
+          >
+
+            <div class="quality-head">
+
+              <div>
+                <span class="quality-mark">›</span>
+                <span class="quality-title">
+                  Transparent Process
+                </span>
+              </div>
+
+              <span class="quality-arrow">→</span>
+
+            </div>
+
+            <div class="quality-detail">
+              Clear communication about what is required, what has
+              been completed and what needs attention next.
+            </div>
+
+          </div>
+
+
+          <div
+            class="quality"
+            tabindex="0"
+            role="button"
+            aria-expanded="false"
+          >
+
+            <div class="quality-head">
+
+              <div>
+                <span class="quality-mark">›</span>
+                <span class="quality-title">
+                  Personalized Service
+                </span>
+              </div>
+
+              <span class="quality-arrow">→</span>
+
+            </div>
+
+            <div class="quality-detail">
+              Advice and support are shaped around the client's
+              business, requirements and financial situation rather
+              than following a one-size-fits-all process.
+            </div>
+
+          </div>
+
+
+          <div
+            class="quality"
+            tabindex="0"
+            role="button"
+            aria-expanded="false"
+          >
+
+            <div class="quality-head">
+
+              <div>
+                <span class="quality-mark">›</span>
+                <span class="quality-title">
+                  Timely Compliance
+                </span>
+              </div>
+
+              <span class="quality-arrow">→</span>
+
+            </div>
+
+            <div class="quality-detail">
+              Important tax and compliance responsibilities are
+              approached with structure and attention to deadlines.
+            </div>
+
+          </div>
+
         </div>
 
-        <div class="quality">
-          <span>›</span>
-          Timely Compliance
+      </div>
+
+    </div>
+
+
+    <!-- =======================================================
+         EXPERIENCE
+    ======================================================== -->
+
+    <div class="experience" id="experience">
+
+      <div class="experience-heading reveal">
+
+        <div class="section-label">
+          Experience
+        </div>
+
+        <h2 class="section-title">
+          Built around accuracy, consistency and trust.
+        </h2>
+
+        <p>
+          With more than three years of professional experience and
+          30+ clients handled, every requirement is approached with
+          a structured process — from organizing financial records
+          to keeping tax and compliance responsibilities on track.
+        </p>
+
+      </div>
+
+
+      <div class="experience-grid">
+
+        <div class="experience-stats reveal">
+
+          <div class="stat-card">
+
+            <div class="stat-number">3+</div>
+
+            <div class="stat-label">
+              Years of Experience
+            </div>
+
+            <div class="stat-description">
+              Practical experience across accounting, taxation,
+              GST and compliance.
+            </div>
+
+          </div>
+
+
+          <div class="stat-card">
+
+            <div class="stat-number">30+</div>
+
+            <div class="stat-label">
+              Clients Handled
+            </div>
+
+            <div class="stat-description">
+              Supporting individuals, professionals and business
+              requirements.
+            </div>
+
+          </div>
+
+
+          <div class="stat-card">
+
+            <div class="stat-number">6</div>
+
+            <div class="stat-label">
+              Core Service Areas
+            </div>
+
+            <div class="stat-description">
+              Accounting, tax, GST, audit, corporate compliance
+              and financial advisory.
+            </div>
+
+          </div>
+
+
+          <div class="stat-card">
+
+            <div class="stat-number">1:1</div>
+
+            <div class="stat-label">
+              Personal Attention
+            </div>
+
+            <div class="stat-description">
+              Direct, practical communication focused on the
+              requirement at hand.
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="experience-process reveal">
+
+          <div class="process-step">
+
+            <div class="process-number">01</div>
+
+            <div class="process-content">
+
+              <h3>Understand</h3>
+
+              <p>
+                Start by understanding the business, requirement,
+                current records and the specific problem that needs
+                to be solved.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="process-step">
+
+            <div class="process-number">02</div>
+
+            <div class="process-content">
+
+              <h3>Organize</h3>
+
+              <p>
+                Relevant financial information, documents and
+                compliance requirements are brought into a clear,
+                structured process.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="process-step">
+
+            <div class="process-number">03</div>
+
+            <div class="process-content">
+
+              <h3>Review</h3>
+
+              <p>
+                Important figures and requirements are reviewed
+                carefully so potential gaps and responsibilities
+                can be identified.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="process-step">
+
+            <div class="process-number">04</div>
+
+            <div class="process-content">
+
+              <h3>Guide</h3>
+
+              <p>
+                The final step is straightforward guidance: what
+                has been completed, what needs attention and what
+                should happen next.
+              </p>
+
+            </div>
+
+          </div>
+
         </div>
 
       </div>
@@ -1969,8 +2719,9 @@
   </section>
 
 
-
-  <!-- CTA -->
+  <!-- =========================================================
+       CTA
+  ========================================================= -->
 
   <section class="cta">
 
@@ -2000,12 +2751,12 @@
         </a>
 
         <a
-          href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20discuss%20my%20accounting%2C%20tax%20or%20compliance%20requirements."
-          class="btn btn-whatsapp"
+          href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20discuss%20your%20accounting%2C%20tax%20or%20compliance%20services."
           target="_blank"
           rel="noopener noreferrer"
+          class="btn btn-whatsapp"
         >
-          WhatsApp Us
+          Chat on WhatsApp
         </a>
 
       </div>
@@ -2015,8 +2766,9 @@
   </section>
 
 
-
-  <!-- CONTACT -->
+  <!-- =========================================================
+       CONTACT
+  ========================================================= -->
 
   <section class="contact" id="contact">
 
@@ -2042,13 +2794,8 @@
           class="contact-item"
           href="tel:8076300989"
         >
-          <small>
-            Phone
-          </small>
-
-          <strong>
-            8076300989
-          </strong>
+          <small>Phone</small>
+          <strong>8076300989</strong>
         </a>
 
 
@@ -2056,37 +2803,25 @@
           class="contact-item"
           href="mailto:mishrasatyam668@gmail.com"
         >
-          <small>
-            Email
-          </small>
-
-          <strong>
-            mishrasatyam668@gmail.com
-          </strong>
+          <small>Email</small>
+          <strong>mishrasatyam668@gmail.com</strong>
         </a>
 
 
         <a
           class="contact-item"
-          href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20discuss%20my%20requirements.%20Please%20let%20me%20know%20how%20I%20can%20get%20started."
+          href="https://wa.me/918076300989"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <small>
-            WhatsApp
-          </small>
-
-          <strong>
-            Chat on WhatsApp →
-          </strong>
+          <small>WhatsApp</small>
+          <strong>Chat directly on WhatsApp</strong>
         </a>
 
 
         <div class="contact-item">
 
-          <small>
-            Location
-          </small>
+          <small>Location</small>
 
           <strong>
             Delhi, India
@@ -2099,8 +2834,9 @@
     </div>
 
 
-
-    <!-- WEB3FORMS CONTACT FORM -->
+    <!-- =======================================================
+         WEB3FORMS
+    ======================================================== -->
 
     <form
       class="contact-form reveal"
@@ -2109,7 +2845,6 @@
       method="POST"
     >
 
-      <!-- Replace the placeholder below with your actual Web3Forms access key -->
       <input
         type="hidden"
         name="access_key"
@@ -2202,10 +2937,7 @@
           Service Required
         </label>
 
-        <select
-          id="service"
-          name="service"
-        >
+        <select id="service" name="service">
 
           <option>
             Accounting & Bookkeeping
@@ -2264,34 +2996,31 @@
       </button>
 
 
-      <p id="formStatus"></p>
-
-
-      <a
-        id="whatsappFormBtn"
+      <button
+        type="button"
         class="btn whatsapp-form-btn"
-        href="#"
-        target="_blank"
-        rel="noopener noreferrer"
+        id="whatsappFormButton"
       >
         Continue on WhatsApp →
-      </a>
+      </button>
+
+
+      <p id="formStatus"></p>
 
     </form>
 
   </section>
 
 
-
-  <!-- FOOTER -->
+  <!-- =========================================================
+       FOOTER
+  ========================================================= -->
 
   <footer>
 
     <div>
       © 2026
-      <strong>
-        Ledgerwise Advisory
-      </strong>.
+      <strong>Ledgerwise Advisory</strong>.
       All rights reserved.
     </div>
 
@@ -2302,28 +3031,29 @@
   </footer>
 
 
+  <!-- =========================================================
+       FLOATING CONTACT BUTTONS
+  ========================================================= -->
 
-  <!-- FLOATING CONTACT -->
-
-  <div class="floating-actions">
+  <div class="floating-contacts">
 
     <a
       class="floating-contact floating-whatsapp"
-      href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20discuss%20my%20accounting%2C%20tax%20or%20compliance requirements."
+      href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20discuss%20your%20accounting%2C%20tax%20or%20compliance%20services."
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
-      title="Chat on WhatsApp"
+      data-tooltip="Chat on WhatsApp"
     >
       <span aria-hidden="true">◉</span>
     </a>
 
 
     <a
-      class="floating-contact floating-phone"
+      class="floating-contact floating-call"
       href="tel:8076300989"
-      aria-label="Call Ledgerwise Advisory"
-      title="Call 8076300989"
+      aria-label="Call Satyam Kumar Mishra"
+      data-tooltip="Call 8076300989"
     >
       <span aria-hidden="true">☎</span>
     </a>
@@ -2331,23 +3061,24 @@
   </div>
 
 
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================= -->
 
   <script>
 
-    /* MOBILE NAV TOGGLE */
+    /* =========================================================
+       MOBILE NAV
+    ========================================================= */
 
     const navToggle = document.getElementById("navToggle");
     const navLinks = document.getElementById("navLinks");
 
     navToggle.addEventListener("click", function () {
 
-      const isOpen =
-        navLinks.classList.toggle("open");
+      const isOpen = navLinks.classList.toggle("open");
 
-      navToggle.classList.toggle(
-        "open",
-        isOpen
-      );
+      navToggle.classList.toggle("open", isOpen);
 
       navToggle.setAttribute(
         "aria-expanded",
@@ -2357,31 +3088,27 @@
     });
 
 
-    navLinks
-      .querySelectorAll("a")
-      .forEach(function (link) {
+    navLinks.querySelectorAll("a").forEach(function (link) {
 
-        link.addEventListener(
-          "click",
-          function () {
+      link.addEventListener("click", function () {
 
-            navLinks.classList.remove("open");
+        navLinks.classList.remove("open");
 
-            navToggle.classList.remove("open");
+        navToggle.classList.remove("open");
 
-            navToggle.setAttribute(
-              "aria-expanded",
-              "false"
-            );
-
-          }
+        navToggle.setAttribute(
+          "aria-expanded",
+          "false"
         );
 
       });
 
+    });
 
 
-    /* HERO GRAPHIC — SUBTLE PARALLAX */
+    /* =========================================================
+       HERO PARALLAX
+    ========================================================= */
 
     const heroGraphic =
       document.getElementById("heroGraphic");
@@ -2390,35 +3117,25 @@
       window.matchMedia("(pointer: fine)").matches
     ) {
 
-      window.addEventListener(
-        "mousemove",
-        function (event) {
+      window.addEventListener("mousemove", function (event) {
 
-          const x =
-            (
-              event.clientX /
-              window.innerWidth -
-              0.5
-            ) * 14;
+        const x =
+          (event.clientX / window.innerWidth - 0.5) * 14;
 
-          const y =
-            (
-              event.clientY /
-              window.innerHeight -
-              0.5
-            ) * 10;
+        const y =
+          (event.clientY / window.innerHeight - 0.5) * 10;
 
-          heroGraphic.style.transform =
-            `translate(${x}px, ${y}px)`;
+        heroGraphic.style.transform =
+          `translate(${x}px, ${y}px)`;
 
-        }
-      );
+      });
 
     }
 
 
-
-    /* SERVICE CARD TILT */
+    /* =========================================================
+       SERVICE CARD TILT
+    ========================================================= */
 
     document
       .querySelectorAll(".service-card")
@@ -2432,24 +3149,16 @@
               card.getBoundingClientRect();
 
             const x =
-              event.clientX -
-              rect.left;
+              event.clientX - rect.left;
 
             const y =
-              event.clientY -
-              rect.top;
+              event.clientY - rect.top;
 
             const rotateX =
-              (
-                y / rect.height -
-                0.5
-              ) * -4;
+              (y / rect.height - 0.5) * -4;
 
             const rotateY =
-              (
-                x / rect.width -
-                0.5
-              ) * 4;
+              (x / rect.width - 0.5) * 4;
 
             card.style.transform =
               `perspective(800px)
@@ -2473,26 +3182,71 @@
       });
 
 
+    /* =========================================================
+       INTERACTIVE ABOUT QUALITY CARDS
+    ========================================================= */
 
-    /* SCROLL REVEAL */
+    document
+      .querySelectorAll(".quality")
+      .forEach(function (quality) {
+
+        function toggleQuality() {
+
+          const isActive =
+            quality.classList.toggle("active");
+
+          quality.setAttribute(
+            "aria-expanded",
+            isActive ? "true" : "false"
+          );
+
+        }
+
+
+        quality.addEventListener(
+          "click",
+          toggleQuality
+        );
+
+
+        quality.addEventListener(
+          "keydown",
+          function (event) {
+
+            if (
+              event.key === "Enter" ||
+              event.key === " "
+            ) {
+
+              event.preventDefault();
+
+              toggleQuality();
+
+            }
+
+          }
+        );
+
+      });
+
+
+    /* =========================================================
+       SCROLL REVEAL
+    ========================================================= */
 
     const observer =
       new IntersectionObserver(
         function (entries) {
 
-          entries.forEach(
-            function (entry) {
+          entries.forEach(function (entry) {
 
-              if (entry.isIntersecting) {
+            if (entry.isIntersecting) {
 
-                entry.target.classList.add(
-                  "visible"
-                );
-
-              }
+              entry.target.classList.add("visible");
 
             }
-          );
+
+          });
 
         },
         {
@@ -2510,8 +3264,9 @@
       });
 
 
-
-    /* CONTACT FORM — WEB3FORMS + WHATSAPP */
+    /* =========================================================
+       WEB3FORMS
+    ========================================================= */
 
     const form =
       document.getElementById("contactForm");
@@ -2519,35 +3274,23 @@
     const status =
       document.getElementById("formStatus");
 
-    const whatsappFormBtn =
-      document.getElementById(
-        "whatsappFormBtn"
-      );
-
-
     form.addEventListener(
       "submit",
       async function (event) {
 
         event.preventDefault();
 
-
         const submitButton =
           form.querySelector(
             "button[type='submit']"
           );
-
 
         submitButton.disabled = true;
 
         submitButton.innerText =
           "Sending...";
 
-        status.style.display =
-          "none";
-
-        whatsappFormBtn.style.display =
-          "none";
+        status.style.display = "none";
 
 
         const formData =
@@ -2572,8 +3315,7 @@
 
           if (result.success) {
 
-            status.style.display =
-              "block";
+            status.style.display = "block";
 
             status.style.color =
               "#3F7A57";
@@ -2581,68 +3323,20 @@
             status.innerText =
               "Thank you. Your enquiry has been sent successfully.";
 
-
-            const name =
-              document
-                .getElementById("name")
-                .value
-                .trim();
-
-
-            const service =
-              document
-                .getElementById("service")
-                .value
-                .trim();
-
-
-            const message =
-              document
-                .getElementById("message")
-                .value
-                .trim();
-
-
-            const whatsappMessage =
-              `Hi, I have just submitted an enquiry through your website.
-
-Name: ${name}
-Service: ${service}
-Requirement: ${message}
-
-I would like to discuss this further.`;
-
-
-            whatsappFormBtn.href =
-              "https://wa.me/918076300989?text=" +
-              encodeURIComponent(
-                whatsappMessage
-              );
-
-
-            whatsappFormBtn.style.display =
-              "inline-flex";
-
-
             form.reset();
-
 
             submitButton.innerText =
               "Enquiry Sent ✓";
 
 
-            setTimeout(
-              function () {
+            setTimeout(function () {
 
-                submitButton.disabled =
-                  false;
+              submitButton.disabled = false;
 
-                submitButton.innerText =
-                  "Send Enquiry →";
+              submitButton.innerText =
+                "Send Enquiry →";
 
-              },
-              4000
-            );
+            }, 4000);
 
 
           } else {
@@ -2662,8 +3356,7 @@ I would like to discuss this further.`;
           );
 
 
-          status.style.display =
-            "block";
+          status.style.display = "block";
 
           status.style.color =
             "#B5533F";
@@ -2672,8 +3365,7 @@ I would like to discuss this further.`;
             "Something went wrong. Please call 8076300989.";
 
 
-          submitButton.disabled =
-            false;
+          submitButton.disabled = false;
 
           submitButton.innerText =
             "Send Enquiry →";
@@ -2683,7 +3375,72 @@ I would like to discuss this further.`;
       }
     );
 
+
+    /* =========================================================
+       FORM → WHATSAPP
+       User still manually presses Send in WhatsApp.
+    ========================================================= */
+
+    const whatsappFormButton =
+      document.getElementById(
+        "whatsappFormButton"
+      );
+
+
+    whatsappFormButton.addEventListener(
+      "click",
+      function () {
+
+        const name =
+          document.getElementById("name")
+            .value.trim();
+
+        const service =
+          document.getElementById("service")
+            .value;
+
+        const message =
+          document.getElementById("message")
+            .value.trim();
+
+
+        const parts = [
+          "Hi, I would like to discuss my requirements.",
+          "",
+          name
+            ? `Name: ${name}`
+            : "",
+          service
+            ? `Service: ${service}`
+            : "",
+          message
+            ? `Message: ${message}`
+            : ""
+        ].filter(Boolean);
+
+
+        const whatsappMessage =
+          parts.join("\n");
+
+
+        const whatsappURL =
+          "https://wa.me/918076300989?text=" +
+          encodeURIComponent(
+            whatsappMessage
+          );
+
+
+        window.open(
+          whatsappURL,
+          "_blank",
+          "noopener,noreferrer"
+        );
+
+      }
+    );
+
   </script>
 
 </body>
 </html>
+
