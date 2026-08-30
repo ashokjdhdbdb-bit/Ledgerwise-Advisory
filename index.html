@@ -6,12 +6,12 @@
 
   <meta
     name="description"
-    content="Satyam Kumar Mishra — Accounting, Taxation, GST, Compliance, Company Secretary and Financial Advisory services in Delhi."
+    content="Ledgerwise Advisory — Accounting, Taxation, GST, Compliance, Company Secretary and Financial Advisory services."
   >
 
   <meta name="theme-color" content="#F7F3EA">
 
-  <title>Satyam Kumar Mishra | Financial & Business Services</title>
+  <title>Ledgerwise Advisory | Accounting, Tax & Compliance</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,12 +23,6 @@
   >
 
   <style>
-
-    /* =========================================================
-       ROOT — Ivory paper, deep navy, muted brass.
-       A private-ledger palette: warm and legible by day,
-       with a single dark panel reserved for contrast moments.
-    ========================================================= */
 
     :root {
       --paper: #F7F3EA;
@@ -57,9 +51,7 @@
     }
 
 
-    /* =========================================================
-       RESET
-    ========================================================= */
+    /* RESET */
 
     * {
       margin: 0;
@@ -92,7 +84,7 @@
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     }
 
-    body::selection {
+    ::selection {
       background: var(--brass);
       color: var(--paper);
     }
@@ -110,9 +102,7 @@
     }
 
 
-    /* =========================================================
-       NAVIGATION
-    ========================================================= */
+    /* NAVIGATION */
 
     nav {
       position: fixed;
@@ -137,9 +127,6 @@
 
       border-bottom: 1px solid var(--line);
     }
-
-
-    /* Brand */
 
     .brand {
       display: flex;
@@ -180,9 +167,6 @@
       color: var(--ink-faint);
     }
 
-
-    /* Nav Links */
-
     .nav-links {
       list-style: none;
 
@@ -221,7 +205,6 @@
       width: 100%;
     }
 
-
     .nav-cta {
       display: inline-flex;
       align-items: center;
@@ -246,7 +229,6 @@
       color: var(--navy);
       transform: translateY(-2px);
     }
-
 
     .nav-toggle {
       display: none;
@@ -276,18 +258,32 @@
       transition: transform 0.25s ease, opacity 0.25s ease;
     }
 
-    .nav-toggle span { top: 16px; }
-    .nav-toggle span::before { top: -6px; }
-    .nav-toggle span::after { top: 6px; }
+    .nav-toggle span {
+      top: 16px;
+    }
 
-    .nav-toggle.open span { background: transparent; }
-    .nav-toggle.open span::before { transform: translateY(6px) rotate(45deg); }
-    .nav-toggle.open span::after { transform: translateY(-6px) rotate(-45deg); }
+    .nav-toggle span::before {
+      top: -6px;
+    }
+
+    .nav-toggle span::after {
+      top: 6px;
+    }
+
+    .nav-toggle.open span {
+      background: transparent;
+    }
+
+    .nav-toggle.open span::before {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .nav-toggle.open span::after {
+      transform: translateY(-6px) rotate(-45deg);
+    }
 
 
-    /* =========================================================
-       HERO
-    ========================================================= */
+    /* HERO */
 
     .hero {
       position: relative;
@@ -315,14 +311,27 @@
 
       background-image:
         linear-gradient(var(--line) 1px, transparent 1px);
+
       background-size: 100% 84px;
 
-      -webkit-mask-image: linear-gradient(180deg, transparent, rgba(0,0,0,0.55) 30%, rgba(0,0,0,0.55) 80%, transparent);
-      mask-image: linear-gradient(180deg, transparent, rgba(0,0,0,0.55) 30%, rgba(0,0,0,0.55) 80%, transparent);
+      -webkit-mask-image: linear-gradient(
+        180deg,
+        transparent,
+        rgba(0,0,0,0.55) 30%,
+        rgba(0,0,0,0.55) 80%,
+        transparent
+      );
+
+      mask-image: linear-gradient(
+        180deg,
+        transparent,
+        rgba(0,0,0,0.55) 30%,
+        rgba(0,0,0,0.55) 80%,
+        transparent
+      );
 
       opacity: 0.6;
     }
-
 
     .hero-content {
       position: relative;
@@ -330,7 +339,6 @@
 
       max-width: 620px;
     }
-
 
     .eyebrow {
       display: inline-flex;
@@ -354,7 +362,6 @@
       background: var(--brass);
     }
 
-
     h1 {
       font-family: var(--serif);
       font-weight: 500;
@@ -371,7 +378,6 @@
       color: var(--brass);
     }
 
-
     .hero-description {
       max-width: 480px;
       color: var(--ink-soft);
@@ -380,15 +386,11 @@
       margin-bottom: 36px;
     }
 
-
-    /* Buttons */
-
     .buttons {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
     }
-
 
     .btn {
       display: inline-flex;
@@ -408,7 +410,6 @@
       cursor: pointer;
     }
 
-
     .btn-primary {
       background: var(--navy);
       color: var(--paper);
@@ -423,7 +424,6 @@
       box-shadow: 0 14px 30px rgba(169,120,47,0.22);
     }
 
-
     .btn-secondary {
       border: 1px solid var(--line);
       color: var(--ink);
@@ -436,8 +436,21 @@
       transform: translateY(-3px);
     }
 
+    .btn-whatsapp {
+      border: 1px solid rgba(63,122,87,0.3);
+      color: var(--green);
+      background: rgba(63,122,87,0.05);
+    }
 
-    /* Hero signature graphic — a ledger growth line */
+    .btn-whatsapp:hover {
+      border-color: var(--green);
+      background: var(--green);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+
+    /* HERO GRAPHIC */
 
     .hero-graphic {
       position: relative;
@@ -497,17 +510,22 @@
     }
 
     @keyframes drawLine {
-      to { stroke-dashoffset: 0; }
+      to {
+        stroke-dashoffset: 0;
+      }
     }
 
     @keyframes fadeIn {
-      to { opacity: 1; }
+      to {
+        opacity: 1;
+      }
     }
 
     @keyframes popIn {
-      to { opacity: 1; }
+      to {
+        opacity: 1;
+      }
     }
-
 
     .scroll-hint {
       position: absolute;
@@ -534,15 +552,12 @@
     }
 
 
-    /* =========================================================
-       COMMON SECTION
-    ========================================================= */
+    /* COMMON SECTION */
 
     section {
       position: relative;
       padding: 130px 6vw;
     }
-
 
     .section-label {
       display: inline-flex;
@@ -564,7 +579,6 @@
       background: var(--brass);
     }
 
-
     .section-title {
       font-family: var(--serif);
       font-weight: 500;
@@ -575,7 +589,6 @@
       color: var(--ink);
     }
 
-
     .section-subtitle {
       color: var(--ink-soft);
       line-height: 1.8;
@@ -585,9 +598,7 @@
     }
 
 
-    /* =========================================================
-       PRINCIPLES (formerly generic numbered stats)
-    ========================================================= */
+    /* PRINCIPLES */
 
     .principles {
       background: var(--paper-alt);
@@ -599,7 +610,6 @@
 
       padding: 60px 6vw;
     }
-
 
     .principle {
       padding: 0 30px;
@@ -632,9 +642,43 @@
     }
 
 
-    /* =========================================================
-       SKYLINE BANNER
-    ========================================================= */
+    /* EXPERIENCE */
+
+    .experience {
+      background: var(--paper);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 0 6vw;
+    }
+
+    .experience-item {
+      padding: 46px 30px;
+      text-align: center;
+      background: var(--paper);
+    }
+
+    .experience-number {
+      display: block;
+      font-family: var(--serif);
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1;
+      color: var(--brass);
+      margin-bottom: 10px;
+    }
+
+    .experience-label {
+      font-size: 12px;
+      font-family: var(--mono);
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+
+    /* SKYLINE */
 
     .skyline-banner {
       position: relative;
@@ -687,14 +731,11 @@
     }
 
 
-    /* =========================================================
-       SERVICES
-    ========================================================= */
+    /* SERVICES */
 
     .services {
       background: var(--paper);
     }
-
 
     .service-grid {
       margin-top: 60px;
@@ -704,7 +745,6 @@
       background: var(--line);
       border: 1px solid var(--line);
     }
-
 
     .service-card {
       min-height: 270px;
@@ -719,7 +759,6 @@
     .service-card:hover {
       background: #FFFDF8;
     }
-
 
     .service-icon {
       width: 48px;
@@ -740,7 +779,6 @@
       background: rgba(169,120,47,0.06);
     }
 
-
     .service-card h3 {
       font-family: var(--serif);
       font-weight: 500;
@@ -750,116 +788,55 @@
       color: var(--ink);
     }
 
-
     .service-card p {
       color: var(--ink-soft);
       line-height: 1.7;
       font-size: 14px;
     }
 
+    .service-whatsapp {
+      display: inline-flex;
+      margin-top: 20px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 600;
+    }
 
-    /* =========================================================
-       ABOUT
-    ========================================================= */
+
+    /* ABOUT */
 
     .about {
       background: var(--paper-alt);
 
-      display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: 90px;
-      align-items: center;
-    }
-
-
-    .about-visual {
-      min-height: 500px;
-      position: relative;
-      display: grid;
-      place-items: center;
-    }
-
-
-    .portrait-wrap {
-      position: relative;
-      width: min(400px, 88%);
-    }
-
-
-    .portrait-frame {
-      aspect-ratio: 4 / 5;
-      border-radius: 6px;
-      border: 1px solid var(--line);
-      overflow: hidden;
-      position: relative;
-
-      background:
-        radial-gradient(circle at 30% 20%, rgba(169,120,47,0.12), transparent 55%),
-        linear-gradient(165deg, #F1EADA, #E1D3AE);
-
-      box-shadow: 0 40px 70px rgba(18,27,46,0.10);
-    }
-
-    .portrait-frame svg,
-    .portrait-frame img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
       display: block;
+
+      padding-left: 10vw;
+      padding-right: 10vw;
     }
 
-
-    .portrait-caption {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-
-      padding: 18px 22px;
-
-      background: rgba(247,243,234,0.86);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-
-      border-top: 1px solid var(--line);
+    .about-content {
+      max-width: 850px;
+      margin: 0 auto;
     }
-
-    .portrait-caption small {
-      display: block;
-      font-family: var(--mono);
-      font-size: 9.5px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-      margin-bottom: 5px;
-    }
-
-    .portrait-caption strong {
-      font-family: var(--serif);
-      font-style: italic;
-      font-weight: 500;
-      font-size: 17px;
-      color: var(--ink);
-    }
-
 
     .about-content p {
       color: var(--ink-soft);
       line-height: 1.85;
       margin: 24px 0;
-      max-width: 480px;
+      max-width: 700px;
     }
 
+    .about-intro {
+      font-size: 16px;
+    }
 
     .qualities {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px;
       margin-top: 28px;
+      max-width: 700px;
     }
-
 
     .quality {
       padding: 17px 18px;
@@ -870,7 +847,6 @@
       font-size: 13.5px;
     }
 
-
     .quality span {
       color: var(--green);
       margin-right: 8px;
@@ -878,9 +854,7 @@
     }
 
 
-    /* =========================================================
-       CTA — the one deliberate dark panel
-    ========================================================= */
+    /* CTA */
 
     .cta {
       text-align: center;
@@ -893,15 +867,19 @@
       color: var(--paper);
     }
 
-    .cta .section-label { color: var(--brass-light); }
-    .cta .section-label::before { background: var(--brass-light); }
+    .cta .section-label {
+      color: var(--brass-light);
+    }
+
+    .cta .section-label::before {
+      background: var(--brass-light);
+    }
 
     .cta .section-title {
       margin: auto;
       max-width: 820px;
       color: var(--paper);
     }
-
 
     .cta p {
       margin: 22px auto 32px;
@@ -922,9 +900,7 @@
     }
 
 
-    /* =========================================================
-       CONTACT
-    ========================================================= */
+    /* CONTACT */
 
     .contact {
       display: grid;
@@ -933,13 +909,11 @@
       background: var(--paper);
     }
 
-
     .contact-info {
       margin-top: 34px;
       display: grid;
       gap: 14px;
     }
-
 
     .contact-item {
       padding: 20px 22px;
@@ -950,12 +924,10 @@
       display: block;
     }
 
-
     .contact-item:hover {
       border-color: var(--brass);
       transform: translateX(4px);
     }
-
 
     .contact-item small {
       display: block;
@@ -967,7 +939,6 @@
       margin-bottom: 9px;
     }
 
-
     .contact-item strong {
       color: var(--ink);
       font-weight: 500;
@@ -975,9 +946,7 @@
     }
 
 
-    /* =========================================================
-       CONTACT FORM
-    ========================================================= */
+    /* CONTACT FORM */
 
     .contact-form {
       padding: 38px;
@@ -986,18 +955,15 @@
       background: var(--paper-card);
     }
 
-
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
     }
 
-
     .field {
       margin-bottom: 16px;
     }
-
 
     .field label {
       display: block;
@@ -1006,7 +972,6 @@
       margin-bottom: 8px;
       font-weight: 500;
     }
-
 
     .field input,
     .field textarea,
@@ -1022,12 +987,10 @@
       transition: border-color 0.25s;
     }
 
-
     .field input::placeholder,
     .field textarea::placeholder {
       color: var(--ink-faint);
     }
-
 
     .field input:focus,
     .field textarea:focus,
@@ -1035,25 +998,21 @@
       border-color: var(--brass);
     }
 
-
     .field textarea {
       min-height: 130px;
       resize: vertical;
     }
-
 
     .field select option {
       background: var(--paper-card);
       color: var(--ink);
     }
 
-
     .form-submit {
       width: 100%;
       border: 0;
       margin-top: 6px;
     }
-
 
     #formStatus {
       margin-top: 15px;
@@ -1063,10 +1022,23 @@
       display: none;
     }
 
+    .whatsapp-form-btn {
+      display: none;
+      width: 100%;
+      margin-top: 12px;
+      background: #25D366;
+      color: white;
+      border: 1px solid #25D366;
+    }
 
-    /* =========================================================
-       FOOTER
-    ========================================================= */
+    .whatsapp-form-btn:hover {
+      background: #1ebe5d;
+      border-color: #1ebe5d;
+      color: white;
+    }
+
+
+    /* FOOTER */
 
     footer {
       padding: 36px 6vw;
@@ -1078,23 +1050,26 @@
       font-size: 12.5px;
     }
 
-
     footer strong {
       color: var(--ink-soft);
       font-weight: 500;
     }
 
 
-    /* =========================================================
-       FLOATING CALL BUTTON
-    ========================================================= */
+    /* FLOATING CONTACT BUTTONS */
 
-    .floating-contact {
+    .floating-actions {
       position: fixed;
       right: 26px;
       bottom: 26px;
       z-index: 90;
 
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .floating-contact {
       width: 56px;
       height: 56px;
       border-radius: 50%;
@@ -1102,25 +1077,35 @@
       display: grid;
       place-items: center;
 
-      background: var(--navy);
-      color: var(--brass-light);
       font-size: 20px;
 
       box-shadow: 0 10px 30px rgba(18,27,46,0.28);
       transition: 0.3s;
     }
 
+    .floating-phone {
+      background: var(--navy);
+      color: var(--brass-light);
+    }
 
-    .floating-contact:hover {
+    .floating-phone:hover {
       transform: scale(1.08);
       background: var(--brass);
       color: var(--navy);
     }
 
+    .floating-whatsapp {
+      background: #25D366;
+      color: white;
+    }
 
-    /* =========================================================
-       REVEAL ANIMATION
-    ========================================================= */
+    .floating-whatsapp:hover {
+      transform: scale(1.08);
+      background: #1ebe5d;
+    }
+
+
+    /* REVEAL */
 
     .reveal {
       opacity: 0;
@@ -1128,16 +1113,13 @@
       transition: opacity 0.8s ease, transform 0.8s ease;
     }
 
-
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
 
 
-    /* =========================================================
-       RESPONSIVE
-    ========================================================= */
+    /* RESPONSIVE */
 
     @media (max-width: 950px) {
 
@@ -1188,17 +1170,8 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      .about,
       .contact {
         grid-template-columns: 1fr;
-      }
-
-      .about {
-        gap: 50px;
-      }
-
-      .contact {
-        gap: 40px;
       }
 
       .principles {
@@ -1269,8 +1242,27 @@
         grid-template-columns: 1fr;
       }
 
-      .about-visual {
-        min-height: 340px;
+      .experience {
+        grid-template-columns: 1fr;
+        padding: 0 5vw;
+      }
+
+      .experience-item {
+        padding: 34px 15px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .experience-item:last-child {
+        border-bottom: 0;
+      }
+
+      .about {
+        padding-left: 5vw;
+        padding-right: 5vw;
+      }
+
+      .contact-form {
+        padding: 25px 20px;
       }
 
       footer {
@@ -1279,10 +1271,20 @@
         text-align: center;
       }
 
+      .floating-actions {
+        right: 18px;
+        bottom: 18px;
+      }
+
+      .floating-contact {
+        width: 52px;
+        height: 52px;
+      }
+
     }
 
 
-    /* Accessibility */
+    /* ACCESSIBILITY */
 
     a:focus-visible,
     button:focus-visible,
@@ -1295,7 +1297,9 @@
 
     @media (prefers-reduced-motion: reduce) {
 
-      html { scroll-behavior: auto; }
+      html {
+        scroll-behavior: auto;
+      }
 
       *,
       *::before,
@@ -1313,13 +1317,11 @@
 <body>
 
 
-  <!-- =========================================================
-       NAVIGATION
-  ========================================================= -->
+  <!-- NAVIGATION -->
 
   <nav>
 
-    <a href="#" class="brand" aria-label="Satyam Kumar Mishra">
+    <a href="#" class="brand" aria-label="Ledgerwise Advisory">
 
       <svg
         class="brand-logo"
@@ -1328,13 +1330,27 @@
         aria-hidden="true"
       >
 
-        <!-- seal ground -->
-        <circle cx="50" cy="50" r="47" fill="#121B2E" stroke="#A9782F" stroke-width="1.5" />
-        <circle cx="50" cy="50" r="39.5" fill="none" stroke="#C89A4F" stroke-width="0.6" stroke-opacity="0.55" />
+        <circle
+          cx="50"
+          cy="50"
+          r="47"
+          fill="#121B2E"
+          stroke="#A9782F"
+          stroke-width="1.5"
+        />
 
-        <!-- bezel ticks -->
+        <circle
+          cx="50"
+          cy="50"
+          r="39.5"
+          fill="none"
+          stroke="#C89A4F"
+          stroke-width="0.6"
+          stroke-opacity="0.55"
+        />
+
         <g stroke="#C89A4F" stroke-width="1" stroke-opacity="0.6">
-          <line x1="50" y1="5" x2="50" y2="9.5" transform="rotate(0 50 50)" />
+          <line x1="50" y1="5" x2="50" y2="9.5" />
           <line x1="50" y1="5" x2="50" y2="9.5" transform="rotate(30 50 50)" />
           <line x1="50" y1="5" x2="50" y2="9.5" transform="rotate(60 50 50)" />
           <line x1="50" y1="5" x2="50" y2="9.5" transform="rotate(90 50 50)" />
@@ -1348,7 +1364,6 @@
           <line x1="50" y1="5" x2="50" y2="9.5" transform="rotate(330 50 50)" />
         </g>
 
-        <!-- monogram -->
         <text
           x="50"
           y="47"
@@ -1360,9 +1375,16 @@
           fill="#E7CE9C"
         >SKM</text>
 
-        <line x1="34" y1="53" x2="66" y2="53" stroke="#C89A4F" stroke-width="0.75" stroke-opacity="0.55" />
+        <line
+          x1="34"
+          y1="53"
+          x2="66"
+          y2="53"
+          stroke="#C89A4F"
+          stroke-width="0.75"
+          stroke-opacity="0.55"
+        />
 
-        <!-- ledger growth mark -->
         <path
           d="M31 71 L41 65 L50 68 L64 55"
           stroke="#C89A4F"
@@ -1372,16 +1394,23 @@
           stroke-linejoin="round"
         />
 
-        <circle cx="64" cy="55" r="2.4" fill="#C89A4F" />
+        <circle
+          cx="64"
+          cy="55"
+          r="2.4"
+          fill="#C89A4F"
+        />
 
       </svg>
 
 
       <div class="brand-text">
 
-        <div class="brand-name">Satyam <em>K.</em> Mishra</div>
+        <div class="brand-name">Ledgerwise Advisory</div>
 
-        <div class="brand-sub">FINANCIAL SERVICES</div>
+        <div class="brand-sub">
+          ACCOUNTING · TAX · COMPLIANCE
+        </div>
 
       </div>
 
@@ -1396,27 +1425,40 @@
 
 
     <div style="display:flex; align-items:center; gap:14px;">
-      <a href="#contact" class="nav-cta">Let's Talk</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+
+      <a href="#contact" class="nav-cta">
+        Let's Talk
+      </a>
+
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
         <span></span>
       </button>
+
     </div>
 
   </nav>
 
 
 
-  <!-- =========================================================
-       HERO
-  ========================================================= -->
+  <!-- HERO -->
 
   <header class="hero">
 
     <div class="hero-content reveal">
 
-      <div class="eyebrow">Professional Services · Delhi</div>
+      <div class="eyebrow">
+        FINANCIAL &amp; BUSINESS SUPPORT
+      </div>
 
-      <h1>Numbers made<br><em>simple.</em></h1>
+      <h1>
+        Numbers made<br>
+        <em>simple.</em>
+      </h1>
 
       <p class="hero-description">
         Accounting, taxation, GST, compliance and business support
@@ -1425,18 +1467,39 @@
       </p>
 
       <div class="buttons">
-        <a href="#contact" class="btn btn-primary">Book a Consultation →</a>
-        <a href="#services" class="btn btn-secondary">Explore Services</a>
+
+        <a href="#contact" class="btn btn-primary">
+          Book a Consultation →
+        </a>
+
+        <a href="#services" class="btn btn-secondary">
+          Explore Services
+        </a>
+
+        <a
+          href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20discuss%20your%20accounting%2C%20tax%20or%20compliance%20services."
+          class="btn btn-whatsapp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp Us
+        </a>
+
       </div>
 
     </div>
 
 
-    <!-- Signature graphic: a hand-drawn ledger growth line -->
-    <div class="hero-graphic" id="heroGraphic">
-      <svg viewBox="0 0 560 460" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <!-- HERO GRAPHIC -->
 
-        <!-- ledger grid -->
+    <div class="hero-graphic" id="heroGraphic">
+
+      <svg
+        viewBox="0 0 560 460"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+
         <g stroke="rgba(27,31,39,0.08)" stroke-width="1">
           <line x1="0" y1="60" x2="560" y2="60" />
           <line x1="0" y1="140" x2="560" y2="140" />
@@ -1445,7 +1508,6 @@
           <line x1="0" y1="380" x2="560" y2="380" />
         </g>
 
-        <!-- soft fill under the line -->
         <path
           class="ledger-fill"
           d="M20 340 L120 300 L210 330 L300 230 L390 260 L480 120 L540 90 L540 420 L20 420 Z"
@@ -1453,75 +1515,182 @@
         />
 
         <defs>
-          <linearGradient id="brassFade" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient
+            id="brassFade"
+            x1="0"
+            y1="0"
+            x2="0"
+            y2="1"
+          >
             <stop offset="0%" stop-color="#C89A4F" stop-opacity="0.16" />
             <stop offset="100%" stop-color="#C89A4F" stop-opacity="0" />
           </linearGradient>
         </defs>
 
-        <!-- the ledger line itself -->
         <path
           class="ledger-line"
           d="M20 340 L120 300 L210 330 L300 230 L390 260 L480 120 L540 90"
         />
 
-        <!-- data nodes -->
-        <circle class="ledger-node" cx="120" cy="300" r="5" style="animation-delay:0.9s" />
-        <circle class="ledger-node" cx="300" cy="230" r="5" style="animation-delay:1.3s" />
-        <circle class="ledger-node" cx="480" cy="120" r="5" style="animation-delay:1.7s" />
-        <circle class="ledger-node" cx="540" cy="90" r="6" style="animation-delay:2.0s" />
+        <circle
+          class="ledger-node"
+          cx="120"
+          cy="300"
+          r="5"
+          style="animation-delay:0.9s"
+        />
 
-        <!-- annotations -->
-        <text class="ledger-tag" x="150" y="290" style="animation-delay:1.4s">FY24</text>
-        <text class="ledger-tag" x="330" y="220" style="animation-delay:1.8s">FY25</text>
-        <text class="ledger-tag accent" x="470" y="70" style="animation-delay:2.2s">Balanced ✓</text>
+        <circle
+          class="ledger-node"
+          cx="300"
+          cy="230"
+          r="5"
+          style="animation-delay:1.3s"
+        />
+
+        <circle
+          class="ledger-node"
+          cx="480"
+          cy="120"
+          r="5"
+          style="animation-delay:1.7s"
+        />
+
+        <circle
+          class="ledger-node"
+          cx="540"
+          cy="90"
+          r="6"
+          style="animation-delay:2.0s"
+        />
+
+        <text
+          class="ledger-tag"
+          x="150"
+          y="290"
+          style="animation-delay:1.4s"
+        >
+          FY24
+        </text>
+
+        <text
+          class="ledger-tag"
+          x="330"
+          y="220"
+          style="animation-delay:1.8s"
+        >
+          FY25
+        </text>
+
+        <text
+          class="ledger-tag accent"
+          x="470"
+          y="70"
+          style="animation-delay:2.2s"
+        >
+          Balanced ✓
+        </text>
 
       </svg>
+
     </div>
 
 
-    <div class="scroll-hint">Scroll to explore</div>
+    <div class="scroll-hint">
+      Scroll to explore
+    </div>
 
   </header>
 
 
 
-  <!-- =========================================================
-       PRINCIPLES
-  ========================================================= -->
+  <!-- PRINCIPLES -->
 
   <section class="principles">
 
     <div class="principle reveal">
       <div class="principle-mark">§</div>
       <div class="principle-title">Personal Attention</div>
-      <div class="principle-copy">Every filing and figure reviewed directly — never handed off to a queue.</div>
+      <div class="principle-copy">
+        Every filing and figure reviewed directly — never handed off to a queue.
+      </div>
     </div>
 
     <div class="principle reveal">
       <div class="principle-mark">%</div>
       <div class="principle-title">Professional Approach</div>
-      <div class="principle-copy">Structured processes for compliance, documentation and reporting, done right the first time.</div>
+      <div class="principle-copy">
+        Structured processes for compliance, documentation and reporting, done right the first time.
+      </div>
     </div>
 
     <div class="principle reveal">
       <div class="principle-mark">→</div>
       <div class="principle-title">Clear Guidance</div>
-      <div class="principle-copy">Plain explanations of what a number means and what to do about it — no jargon.</div>
+      <div class="principle-copy">
+        Plain explanations of what a number means and what to do about it — no jargon.
+      </div>
     </div>
 
   </section>
 
 
 
-  <!-- =========================================================
-       SKYLINE BANNER
-  ========================================================= -->
+  <!-- EXPERIENCE -->
+
+  <section class="experience">
+
+    <div class="experience-item reveal">
+
+      <span class="experience-number">
+        3+
+      </span>
+
+      <span class="experience-label">
+        Years Experience
+      </span>
+
+    </div>
+
+
+    <div class="experience-item reveal">
+
+      <span class="experience-number">
+        30+
+      </span>
+
+      <span class="experience-label">
+        Clients Served
+      </span>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- SKYLINE -->
 
   <section class="skyline-banner">
 
-    <svg class="skyline-art" viewBox="0 0 1400 260" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <line x1="0" y1="259" x2="1400" y2="259" stroke="#C89A4F" stroke-opacity="0.32" stroke-width="1" />
+    <svg
+      class="skyline-art"
+      viewBox="0 0 1400 260"
+      preserveAspectRatio="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+
+      <line
+        x1="0"
+        y1="259"
+        x2="1400"
+        y2="259"
+        stroke="#C89A4F"
+        stroke-opacity="0.32"
+        stroke-width="1"
+      />
+
       <g fill="#C89A4F">
         <rect x="15" y="140" width="55" height="120" opacity="0.14" />
         <rect x="85" y="80" width="42" height="180" opacity="0.20" />
@@ -1542,70 +1711,199 @@
         <rect x="1248" y="120" width="55" height="140" opacity="0.14" />
         <rect x="1315" y="90" width="50" height="170" opacity="0.17" />
       </g>
+
     </svg>
 
+
     <div class="skyline-quote reveal">
-      <p>Every business runs on paperwork most owners never see. My job is to make sure it never becomes the reason something goes wrong.</p>
-      <span>— Satyam Kumar Mishra</span>
+
+      <p>
+        Every business runs on paperwork most owners never see.
+        My job is to make sure it never becomes the reason something goes wrong.
+      </p>
+
+      <span>
+        — Satyam Kumar Mishra
+      </span>
+
     </div>
 
   </section>
 
 
 
-  <!-- =========================================================
-       SERVICES
-  ========================================================= -->
+  <!-- SERVICES -->
 
   <section class="services" id="services">
 
     <div class="reveal">
-      <div class="section-label">What I Do</div>
-      <h2 class="section-title">Professional services for your financial journey.</h2>
+
+      <div class="section-label">
+        What I Do
+      </div>
+
+      <h2 class="section-title">
+        Professional services for your financial journey.
+      </h2>
+
       <p class="section-subtitle">
         From everyday accounting to taxation and corporate
         compliance, get practical support for the things that
         matter to your business.
       </p>
+
     </div>
 
 
     <div class="service-grid">
 
       <article class="service-card reveal">
+
         <div class="service-icon">▤</div>
-        <h3>Accounting & Bookkeeping</h3>
-        <p>Organized bookkeeping, ledger management, reconciliation, financial statements and reporting support.</p>
+
+        <h3>
+          Accounting &amp; Bookkeeping
+        </h3>
+
+        <p>
+          Organized bookkeeping, ledger management, reconciliation,
+          financial statements and reporting support.
+        </p>
+
+        <a
+          class="service-whatsapp"
+          href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20Accounting%20%26%20Bookkeeping%20services."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ask on WhatsApp →
+        </a>
+
       </article>
 
+
       <article class="service-card reveal">
+
         <div class="service-icon">₹</div>
-        <h3>Income Tax</h3>
-        <p>Income tax return filing, tax computation, planning and assistance with tax-related notices and compliance.</p>
+
+        <h3>
+          Income Tax
+        </h3>
+
+        <p>
+          Income tax return filing, tax computation, planning
+          and assistance with tax-related notices and compliance.
+        </p>
+
+        <a
+          class="service-whatsapp"
+          href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20Income%20Tax%20services."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ask on WhatsApp →
+        </a>
+
       </article>
 
+
       <article class="service-card reveal">
+
         <div class="service-icon">%</div>
-        <h3>GST Services</h3>
-        <p>GST registration, return filing, reconciliation and ongoing GST compliance support.</p>
+
+        <h3>
+          GST Services
+        </h3>
+
+        <p>
+          GST registration, return filing, reconciliation
+          and ongoing GST compliance support.
+        </p>
+
+        <a
+          class="service-whatsapp"
+          href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20GST%20services."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ask on WhatsApp →
+        </a>
+
       </article>
 
+
       <article class="service-card reveal">
+
         <div class="service-icon">✓</div>
-        <h3>Audit & Assurance</h3>
-        <p>Tax audit, financial statement review, audit support and professional certification services.</p>
+
+        <h3>
+          Audit &amp; Assurance
+        </h3>
+
+        <p>
+          Tax audit, financial statement review, audit support
+          and professional certification services.
+        </p>
+
+        <a
+          class="service-whatsapp"
+          href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20Audit%20%26%20Assurance%20services."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ask on WhatsApp →
+        </a>
+
       </article>
 
+
       <article class="service-card reveal">
+
         <div class="service-icon">⌘</div>
-        <h3>Company Secretary Services</h3>
-        <p>Company incorporation support, ROC-related compliance, statutory filings and corporate documentation.</p>
+
+        <h3>
+          Company Secretary Services
+        </h3>
+
+        <p>
+          Company incorporation support, ROC-related compliance,
+          statutory filings and corporate documentation.
+        </p>
+
+        <a
+          class="service-whatsapp"
+          href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20Company%20Secretary%20services."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ask on WhatsApp →
+        </a>
+
       </article>
 
+
       <article class="service-card reveal">
+
         <div class="service-icon">↗</div>
-        <h3>Financial Advisory</h3>
-        <p>Financial planning, business analysis, cash-flow planning and practical financial guidance.</p>
+
+        <h3>
+          Financial Advisory
+        </h3>
+
+        <p>
+          Financial planning, business analysis, cash-flow planning
+          and practical financial guidance.
+        </p>
+
+        <a
+          class="service-whatsapp"
+          href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20Financial%20Advisory%20services."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ask on WhatsApp →
+        </a>
+
       </article>
 
     </div>
@@ -1614,47 +1912,56 @@
 
 
 
-  <!-- =========================================================
-       ABOUT
-  ========================================================= -->
+  <!-- ABOUT -->
 
   <section class="about" id="about">
 
-    <div class="about-visual reveal">
-      <div class="portrait-wrap">
-
-        <div class="portrait-frame">
-
-          <img src="satyam-portrait.jpg" alt="Satyam Kumar Mishra">
-
-          <div class="portrait-caption">
-            <small>Founder &amp; Principal Consultant</small>
-            <strong>Satyam Kumar Mishra</strong>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-
-
     <div class="about-content reveal">
 
-      <div class="section-label">About</div>
+      <div class="section-label">
+        About
+      </div>
 
-      <h2 class="section-title">Clear numbers.<br>Better decisions.</h2>
+      <h2 class="section-title">
+        Clear numbers.<br>
+        Better decisions.
+      </h2>
 
-      <p>
+      <p class="about-intro">
         Satyam Kumar Mishra provides professional accounting,
         taxation, compliance and business support services with
         a focus on accuracy, transparency and practical guidance.
       </p>
 
+      <p>
+        With over 3 years of experience, he has supported
+        30+ clients with accounting, taxation, GST, compliance
+        and financial requirements.
+      </p>
+
+
       <div class="qualities">
-        <div class="quality"><span>›</span>Reliable Support</div>
-        <div class="quality"><span>›</span>Transparent Process</div>
-        <div class="quality"><span>›</span>Personalized Service</div>
-        <div class="quality"><span>›</span>Timely Compliance</div>
+
+        <div class="quality">
+          <span>›</span>
+          Reliable Support
+        </div>
+
+        <div class="quality">
+          <span>›</span>
+          Transparent Process
+        </div>
+
+        <div class="quality">
+          <span>›</span>
+          Personalized Service
+        </div>
+
+        <div class="quality">
+          <span>›</span>
+          Timely Compliance
+        </div>
+
       </div>
 
     </div>
@@ -1663,59 +1970,128 @@
 
 
 
-  <!-- =========================================================
-       CTA
-  ========================================================= -->
+  <!-- CTA -->
 
   <section class="cta">
 
     <div class="reveal">
-      <div class="section-label">Let's Work Together</div>
-      <h2 class="section-title">Your finances deserve clarity.</h2>
+
+      <div class="section-label">
+        Let's Work Together
+      </div>
+
+      <h2 class="section-title">
+        Your finances deserve clarity.
+      </h2>
+
       <p>
         Whether you need help with accounting, taxation,
         GST, compliance or business matters, let's start
         a conversation.
       </p>
-      <a href="#contact" class="btn btn-primary">Get in Touch →</a>
+
+      <div class="buttons" style="justify-content:center;">
+
+        <a
+          href="#contact"
+          class="btn btn-primary"
+        >
+          Get in Touch →
+        </a>
+
+        <a
+          href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20discuss%20my%20accounting%2C%20tax%20or%20compliance%20requirements."
+          class="btn btn-whatsapp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp Us
+        </a>
+
+      </div>
+
     </div>
 
   </section>
 
 
 
-  <!-- =========================================================
-       CONTACT
-  ========================================================= -->
+  <!-- CONTACT -->
 
   <section class="contact" id="contact">
 
     <div class="reveal">
 
-      <div class="section-label">Contact</div>
+      <div class="section-label">
+        Contact
+      </div>
 
-      <h2 class="section-title">Let's talk about your requirements.</h2>
+      <h2 class="section-title">
+        Let's talk about your requirements.
+      </h2>
 
       <p class="section-subtitle">
         Reach out directly or send a message using the form.
         Your enquiry will be sent securely for follow-up.
       </p>
 
+
       <div class="contact-info">
 
-        <a class="contact-item" href="tel:8076300989">
-          <small>Phone</small>
-          <strong>8076300989</strong>
+        <a
+          class="contact-item"
+          href="tel:8076300989"
+        >
+          <small>
+            Phone
+          </small>
+
+          <strong>
+            8076300989
+          </strong>
         </a>
 
-        <a class="contact-item" href="mailto:mishrasatyam668@gmail.com">
-          <small>Email</small>
-          <strong>mishrasatyam668@gmail.com</strong>
+
+        <a
+          class="contact-item"
+          href="mailto:mishrasatyam668@gmail.com"
+        >
+          <small>
+            Email
+          </small>
+
+          <strong>
+            mishrasatyam668@gmail.com
+          </strong>
         </a>
+
+
+        <a
+          class="contact-item"
+          href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20discuss%20my%20requirements.%20Please%20let%20me%20know%20how%20I%20can%20get%20started."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <small>
+            WhatsApp
+          </small>
+
+          <strong>
+            Chat on WhatsApp →
+          </strong>
+        </a>
+
 
         <div class="contact-item">
-          <small>Location</small>
-          <strong>Delhi, India</strong>
+
+          <small>
+            Location
+          </small>
+
+          <strong>
+            Delhi, India
+          </strong>
+
         </div>
 
       </div>
@@ -1723,58 +2099,183 @@
     </div>
 
 
-    <!-- =======================================================
-         WEB3FORMS CONTACT FORM
-    ======================================================== -->
 
-    <form class="contact-form reveal" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+    <!-- WEB3FORMS CONTACT FORM -->
 
-      <input type="hidden" name="access_key" value="580e42ee-3003-4c68-ba85-881617f5faaa">
-      <input type="hidden" name="subject" value="New Website Enquiry - Satyam Kumar Mishra">
-      <input type="hidden" name="from_name" value="Satyam Kumar Mishra Website">
-      <input type="hidden" name="redirect" value="false">
-      <input type="checkbox" name="botcheck" style="display:none">
+    <form
+      class="contact-form reveal"
+      id="contactForm"
+      action="https://api.web3forms.com/submit"
+      method="POST"
+    >
+
+      <!-- Replace the placeholder below with your actual Web3Forms access key -->
+      <input
+        type="hidden"
+        name="access_key"
+        value="580e42ee-3003-4c68-ba85-881617f5faaa"
+      >
+
+      <input
+        type="hidden"
+        name="subject"
+        value="New Website Enquiry - Ledgerwise Advisory"
+      >
+
+      <input
+        type="hidden"
+        name="from_name"
+        value="Ledgerwise Advisory Website"
+      >
+
+      <input
+        type="hidden"
+        name="redirect"
+        value="false"
+      >
+
+      <input
+        type="checkbox"
+        name="botcheck"
+        style="display:none"
+      >
+
 
       <div class="form-row">
 
         <div class="field">
-          <label for="name">Your Name</label>
-          <input id="name" type="text" name="name" required placeholder="Enter your name">
+
+          <label for="name">
+            Your Name
+          </label>
+
+          <input
+            id="name"
+            type="text"
+            name="name"
+            required
+            placeholder="Enter your name"
+          >
+
         </div>
+
 
         <div class="field">
-          <label for="phone">Phone</label>
-          <input id="phone" type="tel" name="phone" required placeholder="Your phone number">
+
+          <label for="phone">
+            Phone
+          </label>
+
+          <input
+            id="phone"
+            type="tel"
+            name="phone"
+            required
+            placeholder="Your phone number"
+          >
+
         </div>
 
       </div>
 
-      <div class="field">
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" required placeholder="you@example.com">
-      </div>
 
       <div class="field">
-        <label for="service">Service Required</label>
-        <select id="service" name="service">
-          <option>Accounting & Bookkeeping</option>
-          <option>Income Tax</option>
-          <option>GST Services</option>
-          <option>Audit & Assurance</option>
-          <option>Company Secretary Services</option>
-          <option>Financial Advisory</option>
-          <option>Other</option>
+
+        <label for="email">
+          Email
+        </label>
+
+        <input
+          id="email"
+          type="email"
+          name="email"
+          required
+          placeholder="you@example.com"
+        >
+
+      </div>
+
+
+      <div class="field">
+
+        <label for="service">
+          Service Required
+        </label>
+
+        <select
+          id="service"
+          name="service"
+        >
+
+          <option>
+            Accounting & Bookkeeping
+          </option>
+
+          <option>
+            Income Tax
+          </option>
+
+          <option>
+            GST Services
+          </option>
+
+          <option>
+            Audit & Assurance
+          </option>
+
+          <option>
+            Company Secretary Services
+          </option>
+
+          <option>
+            Financial Advisory
+          </option>
+
+          <option>
+            Other
+          </option>
+
         </select>
+
       </div>
+
 
       <div class="field">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required placeholder="Tell me briefly about your requirement..."></textarea>
+
+        <label for="message">
+          Message
+        </label>
+
+        <textarea
+          id="message"
+          name="message"
+          required
+          placeholder="Tell me briefly about your requirement..."
+        ></textarea>
+
       </div>
 
-      <button type="submit" class="btn btn-primary form-submit">Send Enquiry →</button>
+
+      <button
+        type="submit"
+        class="btn btn-primary form-submit"
+      >
+        Send Enquiry →
+      </button>
+
 
       <p id="formStatus"></p>
+
+
+      <a
+        id="whatsappFormBtn"
+        class="btn whatsapp-form-btn"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Continue on WhatsApp →
+      </a>
 
     </form>
 
@@ -1782,158 +2283,405 @@
 
 
 
-  <!-- =========================================================
-       FOOTER
-  ========================================================= -->
+  <!-- FOOTER -->
 
   <footer>
-    <div>© 2026 <strong>Satyam Kumar Mishra</strong>. All rights reserved.</div>
-    <div>Delhi · Professional Financial Services</div>
+
+    <div>
+      © 2026
+      <strong>
+        Ledgerwise Advisory
+      </strong>.
+      All rights reserved.
+    </div>
+
+    <div>
+      Delhi · Accounting · Tax · Compliance
+    </div>
+
   </footer>
 
 
 
-  <!-- =========================================================
-       FLOATING PHONE BUTTON
-  ========================================================= -->
+  <!-- FLOATING CONTACT -->
 
-  <a class="floating-contact" href="tel:8076300989" aria-label="Call Satyam Kumar Mishra" title="Call 8076300989">☎</a>
+  <div class="floating-actions">
+
+    <a
+      class="floating-contact floating-whatsapp"
+      href="https://wa.me/918076300989?text=Hi%2C%20I%20would%20like%20to%20discuss%20my%20accounting%2C%20tax%20or%20compliance requirements."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+      title="Chat on WhatsApp"
+    >
+      <span aria-hidden="true">◉</span>
+    </a>
+
+
+    <a
+      class="floating-contact floating-phone"
+      href="tel:8076300989"
+      aria-label="Call Ledgerwise Advisory"
+      title="Call 8076300989"
+    >
+      <span aria-hidden="true">☎</span>
+    </a>
+
+  </div>
 
 
 
   <script>
 
-    /* =========================================================
-       MOBILE NAV TOGGLE
-    ========================================================= */
+    /* MOBILE NAV TOGGLE */
 
     const navToggle = document.getElementById("navToggle");
     const navLinks = document.getElementById("navLinks");
 
     navToggle.addEventListener("click", function () {
-      const isOpen = navLinks.classList.toggle("open");
-      navToggle.classList.toggle("open", isOpen);
-      navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+
+      const isOpen =
+        navLinks.classList.toggle("open");
+
+      navToggle.classList.toggle(
+        "open",
+        isOpen
+      );
+
+      navToggle.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+      );
+
     });
 
-    navLinks.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        navLinks.classList.remove("open");
-        navToggle.classList.remove("open");
-        navToggle.setAttribute("aria-expanded", "false");
+
+    navLinks
+      .querySelectorAll("a")
+      .forEach(function (link) {
+
+        link.addEventListener(
+          "click",
+          function () {
+
+            navLinks.classList.remove("open");
+
+            navToggle.classList.remove("open");
+
+            navToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+          }
+        );
+
       });
-    });
 
 
-    /* =========================================================
-       HERO GRAPHIC — subtle mouse parallax
-    ========================================================= */
 
-    const heroGraphic = document.getElementById("heroGraphic");
+    /* HERO GRAPHIC — SUBTLE PARALLAX */
 
-    if (window.matchMedia("(pointer: fine)").matches) {
-      window.addEventListener("mousemove", function (event) {
-        const x = (event.clientX / window.innerWidth - 0.5) * 14;
-        const y = (event.clientY / window.innerHeight - 0.5) * 10;
-        heroGraphic.style.transform = `translate(${x}px, ${y}px)`;
-      });
+    const heroGraphic =
+      document.getElementById("heroGraphic");
+
+    if (
+      window.matchMedia("(pointer: fine)").matches
+    ) {
+
+      window.addEventListener(
+        "mousemove",
+        function (event) {
+
+          const x =
+            (
+              event.clientX /
+              window.innerWidth -
+              0.5
+            ) * 14;
+
+          const y =
+            (
+              event.clientY /
+              window.innerHeight -
+              0.5
+            ) * 10;
+
+          heroGraphic.style.transform =
+            `translate(${x}px, ${y}px)`;
+
+        }
+      );
+
     }
 
 
-    /* =========================================================
-       SERVICE CARD TILT (subtle)
-    ========================================================= */
 
-    document.querySelectorAll(".service-card").forEach(function (card) {
+    /* SERVICE CARD TILT */
 
-      card.addEventListener("mousemove", function (event) {
-        const rect = card.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
-        const rotateX = (y / rect.height - 0.5) * -4;
-        const rotateY = (x / rect.width - 0.5) * 4;
+    document
+      .querySelectorAll(".service-card")
+      .forEach(function (card) {
 
-        card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        card.addEventListener(
+          "mousemove",
+          function (event) {
+
+            const rect =
+              card.getBoundingClientRect();
+
+            const x =
+              event.clientX -
+              rect.left;
+
+            const y =
+              event.clientY -
+              rect.top;
+
+            const rotateX =
+              (
+                y / rect.height -
+                0.5
+              ) * -4;
+
+            const rotateY =
+              (
+                x / rect.width -
+                0.5
+              ) * 4;
+
+            card.style.transform =
+              `perspective(800px)
+               rotateX(${rotateX}deg)
+               rotateY(${rotateY}deg)`;
+
+          }
+        );
+
+
+        card.addEventListener(
+          "mouseleave",
+          function () {
+
+            card.style.transform =
+              "perspective(800px) rotateX(0deg) rotateY(0deg)";
+
+          }
+        );
+
       });
 
-      card.addEventListener("mouseleave", function () {
-        card.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg)";
-      });
-
-    });
 
 
-    /* =========================================================
-       SCROLL REVEAL
-    ========================================================= */
+    /* SCROLL REVEAL */
 
-    const observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
+    const observer =
+      new IntersectionObserver(
+        function (entries) {
+
+          entries.forEach(
+            function (entry) {
+
+              if (entry.isIntersecting) {
+
+                entry.target.classList.add(
+                  "visible"
+                );
+
+              }
+
+            }
+          );
+
+        },
+        {
+          threshold: 0.12
         }
+      );
+
+
+    document
+      .querySelectorAll(".reveal")
+      .forEach(function (element) {
+
+        observer.observe(element);
+
       });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll(".reveal").forEach(function (element) {
-      observer.observe(element);
-    });
 
 
-    /* =========================================================
-       CONTACT FORM — WEB3FORMS
-    ========================================================= */
 
-    const form = document.getElementById("contactForm");
-    const status = document.getElementById("formStatus");
+    /* CONTACT FORM — WEB3FORMS + WHATSAPP */
 
-    form.addEventListener("submit", async function (event) {
-      event.preventDefault();
+    const form =
+      document.getElementById("contactForm");
 
-      const submitButton = form.querySelector("button[type='submit']");
-      submitButton.disabled = true;
-      submitButton.innerText = "Sending...";
-      status.style.display = "none";
+    const status =
+      document.getElementById("formStatus");
 
-      const formData = new FormData(form);
+    const whatsappFormBtn =
+      document.getElementById(
+        "whatsappFormBtn"
+      );
 
-      try {
 
-        const response = await fetch(form.action, { method: "POST", body: formData });
-        const result = await response.json();
+    form.addEventListener(
+      "submit",
+      async function (event) {
 
-        if (result.success) {
+        event.preventDefault();
 
-          status.style.display = "block";
-          status.style.color = "#3F7A57";
-          status.innerText = "Thank you. Your enquiry has been sent successfully.";
 
-          form.reset();
-          submitButton.innerText = "Enquiry Sent ✓";
+        const submitButton =
+          form.querySelector(
+            "button[type='submit']"
+          );
 
-          setTimeout(function () {
-            submitButton.disabled = false;
-            submitButton.innerText = "Send Enquiry →";
-          }, 4000);
 
-        } else {
-          throw new Error("Submission failed");
+        submitButton.disabled = true;
+
+        submitButton.innerText =
+          "Sending...";
+
+        status.style.display =
+          "none";
+
+        whatsappFormBtn.style.display =
+          "none";
+
+
+        const formData =
+          new FormData(form);
+
+
+        try {
+
+          const response =
+            await fetch(
+              form.action,
+              {
+                method: "POST",
+                body: formData
+              }
+            );
+
+
+          const result =
+            await response.json();
+
+
+          if (result.success) {
+
+            status.style.display =
+              "block";
+
+            status.style.color =
+              "#3F7A57";
+
+            status.innerText =
+              "Thank you. Your enquiry has been sent successfully.";
+
+
+            const name =
+              document
+                .getElementById("name")
+                .value
+                .trim();
+
+
+            const service =
+              document
+                .getElementById("service")
+                .value
+                .trim();
+
+
+            const message =
+              document
+                .getElementById("message")
+                .value
+                .trim();
+
+
+            const whatsappMessage =
+              `Hi, I have just submitted an enquiry through your website.
+
+Name: ${name}
+Service: ${service}
+Requirement: ${message}
+
+I would like to discuss this further.`;
+
+
+            whatsappFormBtn.href =
+              "https://wa.me/918076300989?text=" +
+              encodeURIComponent(
+                whatsappMessage
+              );
+
+
+            whatsappFormBtn.style.display =
+              "inline-flex";
+
+
+            form.reset();
+
+
+            submitButton.innerText =
+              "Enquiry Sent ✓";
+
+
+            setTimeout(
+              function () {
+
+                submitButton.disabled =
+                  false;
+
+                submitButton.innerText =
+                  "Send Enquiry →";
+
+              },
+              4000
+            );
+
+
+          } else {
+
+            throw new Error(
+              "Submission failed"
+            );
+
+          }
+
+
+        } catch (error) {
+
+          console.error(
+            "Form error:",
+            error
+          );
+
+
+          status.style.display =
+            "block";
+
+          status.style.color =
+            "#B5533F";
+
+          status.innerText =
+            "Something went wrong. Please call 8076300989.";
+
+
+          submitButton.disabled =
+            false;
+
+          submitButton.innerText =
+            "Send Enquiry →";
+
         }
-
-      } catch (error) {
-
-        console.error("Form error:", error);
-
-        status.style.display = "block";
-        status.style.color = "#B5533F";
-        status.innerText = "Something went wrong. Please call 1236549870.";
-
-        submitButton.disabled = false;
-        submitButton.innerText = "Send Enquiry →";
 
       }
-
-    });
+    );
 
   </script>
 
