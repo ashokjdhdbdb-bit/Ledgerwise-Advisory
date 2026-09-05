@@ -20,11 +20,15 @@ module.exports = async (req, res) => {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { service } = req.body || {};
+  const { service, name, phone, email } = req.body || {};
   const amount = SERVICE_PRICES[service];
 
   if (!amount) {
     return res.status(400).json({ error: 'Unknown or unpriced service selected' });
+  }
+
+  if (!name || !phone) {
+    return res.status(400).json({ error: 'Name and phone number are required' });
   }
 
   const instance = new Razorpay({
@@ -37,7 +41,12 @@ module.exports = async (req, res) => {
       amount,
       currency: 'INR',
       receipt: `ledgerwise_${service}_${Date.now()}`,
-      notes: { service },
+      notes: {
+        service,
+        customer_name: name,
+        customer_phone: phone,
+        customer_email: email || 'not provided',
+      },
     });
 
     return res.status(200).json({
