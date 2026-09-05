@@ -848,6 +848,88 @@
       letter-spacing: 1px;
     }
 
+    /* Payment details modal */
+
+    .payment-modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+
+      display: none;
+      align-items: center;
+      justify-content: center;
+
+      padding: 20px;
+
+      background: rgba(18,27,46,0.55);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+
+    .payment-modal-overlay.open {
+      display: flex;
+    }
+
+    .payment-modal {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+
+      padding: 34px;
+      border-radius: 6px;
+
+      background: var(--paper-card);
+      box-shadow: 0 30px 60px rgba(18,27,46,0.28);
+    }
+
+    .payment-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+
+      border: none;
+      background: none;
+
+      font-size: 18px;
+      color: var(--ink-faint);
+      cursor: pointer;
+    }
+
+    .payment-modal-close:hover {
+      color: var(--brass);
+    }
+
+    .modal-service-label {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 10px;
+    }
+
+    .payment-modal h3 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: 24px;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .payment-modal-copy {
+      color: var(--ink-soft);
+      font-size: 13px;
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+
+    .modal-error {
+      display: none;
+      color: #B5533F;
+      font-size: 12px;
+      margin: -6px 0 14px;
+    }
+
     /* =========================================================
        ABOUT / EXPERIENCE
     ========================================================= */
@@ -1593,7 +1675,7 @@
       outline-offset: 2px;
     }
 
-    /* ========================================================
+    /* =========================================================
        RESPONSIVE
     ========================================================= */
 
@@ -2478,9 +2560,24 @@
         </div>
       </article>
 
+      <article class="service-card reveal">
+        <div class="service-icon">↗</div>
+        <h3>Audit & Company Secretary</h3>
+        <p>Tax audit, statutory review, incorporation and ROC-related compliance.</p>
+        <div class="price-action">
+          <div class="price-tag" style="font-size:20px; color:var(--ink-soft);">Custom Quote</div>
+          <div class="price-note">SCOPE-DEPENDENT</div>
+          <a href="#contact" class="btn btn-secondary quote-btn">
+            Request Quote →
+          </a>
+        </div>
+      </article>
+
     </div>
 
-  
+    <div class="price-secure-note">
+      🔒 Payments are processed securely by Razorpay. Card and bank details never touch this website.
+    </div>
 
   </section>
 
@@ -3192,6 +3289,60 @@ With more than three years of professional experience and 30+ clients handled, e
 
 
   <!-- =========================================================
+       PAYMENT DETAILS MODAL (NEW)
+  ========================================================= -->
+
+  <div class="payment-modal-overlay" id="paymentModalOverlay">
+
+    <div class="payment-modal">
+
+      <button
+        class="payment-modal-close"
+        id="paymentModalClose"
+        aria-label="Close"
+      >✕</button>
+
+      <div class="modal-service-label" id="modalServiceLabel"></div>
+
+      <h3>Your details</h3>
+
+      <p class="payment-modal-copy">
+        So the payment can be matched to your filing and a
+        confirmation can be sent to you.
+      </p>
+
+      <div class="field">
+        <label for="modalName">Full Name</label>
+        <input id="modalName" type="text" placeholder="Your name">
+      </div>
+
+      <div class="field">
+        <label for="modalPhone">Phone Number</label>
+        <input id="modalPhone" type="tel" placeholder="10-digit mobile number">
+      </div>
+
+      <div class="field">
+        <label for="modalEmail">Email (optional)</label>
+        <input id="modalEmail" type="email" placeholder="you@example.com">
+      </div>
+
+      <div class="modal-error" id="modalError"></div>
+
+      <button
+        type="button"
+        class="btn btn-primary"
+        id="modalContinueBtn"
+        style="width:100%;"
+      >
+        Continue to Payment →
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================================
        FLOATING CONTACT BUTTONS
   ========================================================= -->
 
@@ -3609,81 +3760,123 @@ With more than three years of professional experience and 30+ clients handled, e
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <script>
 
+    const modalOverlay = document.getElementById('paymentModalOverlay');
+    const modalServiceLabel = document.getElementById('modalServiceLabel');
+    const modalName = document.getElementById('modalName');
+    const modalPhone = document.getElementById('modalPhone');
+    const modalEmail = document.getElementById('modalEmail');
+    const modalError = document.getElementById('modalError');
+    const modalContinueBtn = document.getElementById('modalContinueBtn');
+    const modalCloseBtn = document.getElementById('paymentModalClose');
+
+    let activeService = null;
+    let activeLabel = null;
+    let activeTriggerBtn = null;
+
+    function openPaymentModal(service, label, triggerBtn) {
+      activeService = service;
+      activeLabel = label;
+      activeTriggerBtn = triggerBtn;
+
+      modalServiceLabel.innerText = label;
+      modalName.value = '';
+      modalPhone.value = '';
+      modalEmail.value = '';
+      modalError.style.display = 'none';
+
+      modalOverlay.classList.add('open');
+    }
+
+    function closePaymentModal() {
+      modalOverlay.classList.remove('open');
+    }
+
     document.querySelectorAll('.pay-btn').forEach(function (btn) {
-      btn.addEventListener('click', async function () {
-        const service = btn.dataset.service;
-        const label = btn.dataset.label;
-        const originalText = btn.innerText;
-
-        btn.disabled = true;
-        btn.innerText = 'Preparing payment...';
-
-        try {
-          const orderRes = await fetch('/api/create-order', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ service: service })
-          });
-
-          const order = await orderRes.json();
-          if (order.error) throw new Error(order.error);
-
-          const options = {
-            key: order.key,
-            amount: order.amount,
-            currency: order.currency,
-            name: 'Ledgerwise Advisory',
-            description: label,
-            order_id: order.orderId,
-            theme: { color: '#A9782F' },
-            handler: async function (response) {
-              btn.innerText = 'Verifying payment...';
-
-              const verifyRes = await fetch('/api/verify-payment', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(response)
-              });
-
-              const verify = await verifyRes.json();
-
-              if (verify.success) {
-                btn.innerText = 'Payment Received ✓';
-                alert('Payment successful. You will receive a confirmation on WhatsApp or email shortly.');
-              } else {
-                btn.innerText = originalText;
-                btn.disabled = false;
-                alert('We could not verify that payment. Please call 8076300989 before retrying.');
-              }
-            },
-            modal: {
-              ondismiss: function () {
-                btn.disabled = false;
-                btn.innerText = originalText;
-              }
-            },
-            prefill: { name: '', email: '', contact: '' }
-          };
-
-          const rzp = new Razorpay(options);
-
-          rzp.on('payment.failed', function () {
-            btn.disabled = false;
-            btn.innerText = originalText;
-            alert('Payment failed or was cancelled. Please try again.');
-          });
-
-          rzp.open();
-          btn.innerText = originalText;
-          btn.disabled = false;
-
-        } catch (err) {
-          console.error('Payment error:', err);
-          btn.disabled = false;
-          btn.innerText = originalText;
-          alert('Something went wrong starting the payment. Please try again or call 8076300989.');
-        }
+      btn.addEventListener('click', function () {
+        openPaymentModal(btn.dataset.service, btn.dataset.label, btn);
       });
+    });
+
+    modalCloseBtn.addEventListener('click', closePaymentModal);
+
+    modalOverlay.addEventListener('click', function (event) {
+      if (event.target === modalOverlay) closePaymentModal();
+    });
+
+    modalContinueBtn.addEventListener('click', async function () {
+      const name = modalName.value.trim();
+      const phone = modalPhone.value.trim();
+      const email = modalEmail.value.trim();
+
+      if (!name || !phone) {
+        modalError.innerText = 'Please enter your name and phone number.';
+        modalError.style.display = 'block';
+        return;
+      }
+
+      const originalModalText = modalContinueBtn.innerText;
+      modalContinueBtn.disabled = true;
+      modalContinueBtn.innerText = 'Preparing payment...';
+
+      try {
+        const orderRes = await fetch('/api/create-order', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            service: activeService,
+            name: name,
+            phone: phone,
+            email: email
+          })
+        });
+
+        const order = await orderRes.json();
+        if (order.error) throw new Error(order.error);
+
+        closePaymentModal();
+
+        const options = {
+          key: order.key,
+          amount: order.amount,
+          currency: order.currency,
+          name: 'Ledgerwise Advisory',
+          description: activeLabel,
+          order_id: order.orderId,
+          theme: { color: '#A9782F' },
+          handler: async function (response) {
+            const verifyRes = await fetch('/api/verify-payment', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(response)
+            });
+
+            const verify = await verifyRes.json();
+
+            if (verify.success) {
+              alert('Payment successful for ' + activeLabel + '. You will receive a confirmation on WhatsApp or email shortly.');
+            } else {
+              alert('We could not verify that payment. Please call 8076300989 before retrying.');
+            }
+          },
+          prefill: { name: name, email: email, contact: phone }
+        };
+
+        const rzp = new Razorpay(options);
+
+        rzp.on('payment.failed', function () {
+          alert('Payment failed or was cancelled. Please try again.');
+        });
+
+        rzp.open();
+
+      } catch (err) {
+        console.error('Payment error:', err);
+        modalError.innerText = 'Something went wrong. Please try again or call 8076300989.';
+        modalError.style.display = 'block';
+      } finally {
+        modalContinueBtn.disabled = false;
+        modalContinueBtn.innerText = originalModalText;
+      }
     });
 
   </script>
