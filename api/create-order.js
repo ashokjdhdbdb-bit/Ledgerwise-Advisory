@@ -5,12 +5,14 @@
 const Razorpay = require('razorpay');
 
 // Prices live on the server ONLY — amounts are in paise (₹1 = 100 paise).
-// This is what stops someone from editing the page and paying ₹1 for a ₹999 service.
+// This is what stops someone from editing the page and paying ₹1 for a ₹1,000 service.
 const SERVICE_PRICES = {
-  itr_filing: 99900,        // ₹999 — Income Tax Return filing
-  gst_registration: 149900, // ₹1,499 — GST Registration
-  gst_return: 79900,        // ₹799 — GST Return filing (per filing)
-  bookkeeping: 299900,      // ₹2,999 — Accounting & Bookkeeping (starting/month)
+  gst_return_monthly: 100000,  // ₹1,000 — GST Return (Monthly)
+  gst_return_yearly: 1000000,  // ₹10,000 — GST Return (Yearly)
+  itr_filing: 100000,          // ₹1,000 — ITR Filing
+  dsc_registration: 250000,    // ₹2,500 — DSC Registration
+  bookkeeping: 500000,         // ₹5,000 — Bookkeeping (per month)
+  balance_sheet: 1000000,      // ₹10,000 — Balance Sheet Preparation
 };
 
 module.exports = async (req, res) => {
