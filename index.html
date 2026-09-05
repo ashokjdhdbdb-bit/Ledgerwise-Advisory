@@ -796,6 +796,59 @@
     }
 
     /* =========================================================
+       PRICING (NEW)
+    ========================================================= */
+
+    .price-tag {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: 30px;
+      color: var(--brass);
+      letter-spacing: -0.5px;
+    }
+
+    .price-note {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      color: var(--ink-faint);
+      letter-spacing: 0.5px;
+      margin-top: 2px;
+    }
+
+    .price-action {
+      margin-top: auto;
+      padding-top: 22px;
+    }
+
+    .pay-btn {
+      width: 100%;
+      border: 0;
+      margin-top: 16px;
+    }
+
+    .pay-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    .quote-btn {
+      width: 100%;
+      margin-top: 16px;
+    }
+
+    .price-secure-note {
+      margin-top: 26px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--ink-faint);
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 1px;
+    }
+
+    /* =========================================================
        ABOUT / EXPERIENCE
     ========================================================= */
 
@@ -1890,6 +1943,7 @@
 
     <ul class="nav-links" id="navLinks">
       <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -2066,8 +2120,6 @@
       </svg>
 
     </div>
-
-    
 
   </header>
 
@@ -2317,6 +2369,119 @@
 
       </article>
 
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       PRICING (NEW)
+  ========================================================= -->
+
+  <section class="services" id="pricing" style="padding-top:110px; padding-bottom:150px; background: var(--paper-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+
+    <div class="services-intro reveal">
+      <div>
+        <div class="section-label">Pricing</div>
+        <h2 class="section-title">
+          Fixed prices for common filings. Pay securely online.
+        </h2>
+      </div>
+
+      <div class="services-intro-copy">
+        <p>
+          Straightforward filings are priced upfront and can be paid
+          directly here. For audits, incorporations and advisory
+          work, requirements vary by business, so those are quoted
+          after a short conversation.
+        </p>
+      </div>
+    </div>
+
+    <div class="service-grid">
+
+      <article class="service-card reveal">
+        <div class="service-icon">₹</div>
+        <h3>ITR Filing</h3>
+        <p>Individual income tax return filing, computation and e-verification.</p>
+        <div class="price-action">
+          <div class="price-tag">₹999</div>
+          <div class="price-note">PER FILING</div>
+          <button class="btn btn-primary pay-btn" data-service="itr_filing" data-label="ITR Filing">
+            Pay & Book →
+          </button>
+        </div>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon">%</div>
+        <h3>GST Registration</h3>
+        <p>New GST registration, document preparation and application filing.</p>
+        <div class="price-action">
+          <div class="price-tag">₹1,499</div>
+          <div class="price-note">ONE-TIME</div>
+          <button class="btn btn-primary pay-btn" data-service="gst_registration" data-label="GST Registration">
+            Pay & Book →
+          </button>
+        </div>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon">%</div>
+        <h3>GST Return Filing</h3>
+        <p>Monthly or quarterly GST return preparation and filing.</p>
+        <div class="price-action">
+          <div class="price-tag">₹799</div>
+          <div class="price-note">PER FILING</div>
+          <button class="btn btn-primary pay-btn" data-service="gst_return" data-label="GST Return Filing">
+            Pay & Book →
+          </button>
+        </div>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon">▤</div>
+        <h3>Accounting & Bookkeeping</h3>
+        <p>Ongoing ledger management, reconciliation and reporting.</p>
+        <div class="price-action">
+          <div class="price-tag">₹2,999</div>
+          <div class="price-note">STARTING · PER MONTH</div>
+          <button class="btn btn-primary pay-btn" data-service="bookkeeping" data-label="Accounting & Bookkeeping">
+            Pay & Book →
+          </button>
+        </div>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon">✓</div>
+        <h3>Audit & Assurance</h3>
+        <p>Tax audit, statement review and certification services.</p>
+        <div class="price-action">
+          <div class="price-tag" style="font-size:20px; color:var(--ink-soft);">Custom Quote</div>
+          <div class="price-note">SCOPE-DEPENDENT</div>
+          <a href="#contact" class="btn btn-secondary quote-btn">
+            Request Quote →
+          </a>
+        </div>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon">⌘</div>
+        <h3>Company Secretary Services</h3>
+        <p>Incorporation, ROC filings and corporate documentation.</p>
+        <div class="price-action">
+          <div class="price-tag" style="font-size:20px; color:var(--ink-soft);">Custom Quote</div>
+          <div class="price-note">SCOPE-DEPENDENT</div>
+          <a href="#contact" class="btn btn-secondary quote-btn">
+            Request Quote →
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="price-secure-note">
+      🔒 Payments are processed securely by Razorpay. Card and bank details never touch this website.
     </div>
 
   </section>
@@ -3438,6 +3603,92 @@ With more than three years of professional experience and 30+ clients handled, e
 
   </script>
 
+
+  <!-- =========================================================
+       RAZORPAY CHECKOUT (NEW)
+  ========================================================= -->
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+
+    document.querySelectorAll('.pay-btn').forEach(function (btn) {
+      btn.addEventListener('click', async function () {
+        const service = btn.dataset.service;
+        const label = btn.dataset.label;
+        const originalText = btn.innerText;
+
+        btn.disabled = true;
+        btn.innerText = 'Preparing payment...';
+
+        try {
+          const orderRes = await fetch('/api/create-order', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ service: service })
+          });
+
+          const order = await orderRes.json();
+          if (order.error) throw new Error(order.error);
+
+          const options = {
+            key: order.key,
+            amount: order.amount,
+            currency: order.currency,
+            name: 'Ledgerwise Advisory',
+            description: label,
+            order_id: order.orderId,
+            theme: { color: '#A9782F' },
+            handler: async function (response) {
+              btn.innerText = 'Verifying payment...';
+
+              const verifyRes = await fetch('/api/verify-payment', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(response)
+              });
+
+              const verify = await verifyRes.json();
+
+              if (verify.success) {
+                btn.innerText = 'Payment Received ✓';
+                alert('Payment successful. You will receive a confirmation on WhatsApp or email shortly.');
+              } else {
+                btn.innerText = originalText;
+                btn.disabled = false;
+                alert('We could not verify that payment. Please call 8076300989 before retrying.');
+              }
+            },
+            modal: {
+              ondismiss: function () {
+                btn.disabled = false;
+                btn.innerText = originalText;
+              }
+            },
+            prefill: { name: '', email: '', contact: '' }
+          };
+
+          const rzp = new Razorpay(options);
+
+          rzp.on('payment.failed', function () {
+            btn.disabled = false;
+            btn.innerText = originalText;
+            alert('Payment failed or was cancelled. Please try again.');
+          });
+
+          rzp.open();
+          btn.innerText = originalText;
+          btn.disabled = false;
+
+        } catch (err) {
+          console.error('Payment error:', err);
+          btn.disabled = false;
+          btn.innerText = originalText;
+          alert('Something went wrong starting the payment. Please try again or call 8076300989.');
+        }
+      });
+    });
+
+  </script>
+
 </body>
 </html>
-
