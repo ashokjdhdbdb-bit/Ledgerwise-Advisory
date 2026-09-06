@@ -7,49 +7,66 @@
 
 const { createClient } = require('@supabase/supabase-js');
 
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_KEY
-);
+// Build the client lazily, inside the handler, wrapped in try/catch — so a missing
+// or malformed env var returns a clear JSON error instead of crashing the whole
+// function before it can respond (which is what produces an HTML error page).
+function getSupabaseClient() {
+  if (!process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_KEY) {
+    throw new Error('SUPABASE_URL or SUPABASE_SERVICE_KEY is not set in this deployment');
+  }
+  return createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY);
+}
 
 module.exports = async (req, res) => {
-  if (req.method === 'GET') {
-    const { data, error } = await supabase
-      .from('reviews')
-      .select('name, service, rating, message, created_at')
-      .order('created_at', { ascending: false })
-      .limit(50);
+  let supabase;
 
-    if (error) {
-      console.error('Fetching reviews failed:', error);
+  try {
+    supabase = getSupabaseClient();
+  } catch (configErr) {
+    console.error('Reviews API misconfigured:', configErr.message);
+    return res.status(500).json({ error: 'Reviews are not configured on the server yet' });
+  }
+
+  if (req.method === 'GET') {
+    try {
+      const { data, error } = await supabase
+        .from('reviews')
+        .select('name, service, rating, message, created_at')
+        .order('created_at', { ascending: false })
+        .limit(50);
+
+      if (error) throw error;
+
+      return res.status(200).json({ reviews: data });
+    } catch (err) {
+      console.error('Fetching reviews failed:', err);
       return res.status(500).json({ error: 'Could not load reviews' });
     }
-
-    return res.status(200).json({ reviews: data });
   }
 
   if (req.method === 'POST') {
     const { name, service, rating, message } = req.body || {};
-
     const ratingNum = Number(rating);
 
     if (!name || !message || !ratingNum || ratingNum < 1 || ratingNum > 5) {
       return res.status(400).json({ error: 'Name, a 1-5 rating and a message are required' });
     }
 
-    const { error } = await supabase.from('reviews').insert([{
-      name: String(name).slice(0, 80),
-      service: String(service || '').slice(0, 60),
-      rating: ratingNum,
-      message: String(message).slice(0, 600),
-    }]);
+    try {
+      const { error } = await supabase.from('reviews').insert([{
+        name: String(name).slice(0, 80),
+        service: String(service || '').slice(0, 60),
+        rating: ratingNum,
+        message: String(message).slice(0, 600),
+      }]);
 
-    if (error) {
-      console.error('Saving review failed:', error);
+      if (error) throw error;
+
+      return res.status(200).json({ success: true });
+    } catch (err) {
+      console.error('Saving review failed:', err);
       return res.status(500).json({ error: 'Could not save review' });
     }
-
-    return res.status(200).json({ success: true });
   }
 
   return res.status(405).json({ error: 'Method not allowed' });
