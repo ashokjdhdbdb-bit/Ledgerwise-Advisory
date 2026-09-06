@@ -803,7 +803,7 @@
     }
 
     /* =========================================================
-       PRICING (NEW)
+       PRICING
     ========================================================= */
 
     .price-tag {
@@ -935,6 +935,116 @@
       color: #B5533F;
       font-size: 12px;
       margin: -6px 0 14px;
+    }
+
+    /* =========================================================
+       REVIEWS
+    ========================================================= */
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+
+      background: var(--line);
+      border: 1px solid var(--line);
+
+      margin-bottom: 60px;
+    }
+
+    .review-card {
+      min-height: 220px;
+      padding: 32px 28px;
+
+      background: var(--paper-card);
+
+      display: flex;
+      flex-direction: column;
+
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .review-card:hover {
+      background: #FFFDF8;
+      box-shadow: 0 18px 45px rgba(18,27,46,0.08);
+    }
+
+    .review-stars {
+      color: var(--brass);
+      font-size: 15px;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+
+    .review-quote {
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.75;
+      flex: 1;
+    }
+
+    .review-author {
+      margin-top: 22px;
+      font-weight: 600;
+      font-size: 13.5px;
+      color: var(--ink);
+    }
+
+    .review-role {
+      margin-top: 3px;
+      font-family: var(--mono);
+      font-size: 9.5px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+
+    .review-form-wrap {
+      max-width: 640px;
+      margin: 0 auto;
+
+      padding: 38px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+
+      background: var(--paper-card);
+    }
+
+    .review-form-title {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: 22px;
+      color: var(--ink);
+      margin-bottom: 22px;
+    }
+
+    .star-rating {
+      display: flex;
+      gap: 6px;
+      font-size: 27px;
+      line-height: 1;
+    }
+
+    .star-rating .star {
+      color: var(--line);
+      cursor: pointer;
+      transition: color 0.15s ease, transform 0.15s ease;
+    }
+
+    .star-rating .star:hover {
+      transform: scale(1.1);
+    }
+
+    .star-rating .star.filled {
+      color: var(--brass);
+    }
+
+    #reviewStatus {
+      margin-top: 15px;
+      color: var(--green);
+      font-size: 13px;
+      line-height: 1.5;
+      display: none;
     }
 
     /* =========================================================
@@ -1677,7 +1787,8 @@
     input:focus-visible,
     textarea:focus-visible,
     select:focus-visible,
-    .quality:focus-visible {
+    .quality:focus-visible,
+    .star:focus-visible {
       outline: 2px solid var(--brass);
       outline-offset: 2px;
     }
@@ -1723,7 +1834,7 @@
       }
 
       .nav-links.open {
-        max-height: 320px;
+        max-height: 360px;
       }
 
       .nav-links li {
@@ -1746,7 +1857,8 @@
         margin: 0 auto 20px;
       }
 
-      .service-grid {
+      .service-grid,
+      .review-grid {
         grid-template-columns: 1fr 1fr;
       }
 
@@ -1866,8 +1978,13 @@
         line-height: 1.55;
       }
 
-      .service-grid {
+      .service-grid,
+      .review-grid {
         grid-template-columns: 1fr;
+      }
+
+      .review-form-wrap {
+        padding: 28px 22px;
       }
 
       .qualities,
@@ -2035,6 +2152,7 @@
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#reviews">Reviews</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
 
@@ -2464,7 +2582,7 @@
 
 
   <!-- =========================================================
-       PRICING (NEW)
+       PRICING
   ========================================================= -->
 
   <section class="services" id="pricing" style="padding-top:110px; padding-bottom:150px; background: var(--paper-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
@@ -2566,6 +2684,92 @@
           </button>
         </div>
       </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       REVIEWS (NEW)
+  ========================================================= -->
+
+  <section class="services" id="reviews" style="padding-top:130px; padding-bottom:150px;">
+
+    <div class="services-intro reveal">
+      <div>
+        <div class="section-label">Reviews</div>
+        <h2 class="section-title">
+          What clients say.
+        </h2>
+      </div>
+
+      <div class="services-intro-copy">
+        <p>
+          A few words from people who've worked with Ledgerwise
+          Advisory. If you've used the service, your review is
+          welcome below.
+        </p>
+      </div>
+    </div>
+
+    <div class="review-grid" id="reviewGrid">
+      <!-- Reviews are rendered here by JavaScript -->
+    </div>
+
+    <div class="review-form-wrap reveal">
+
+      <h3 class="review-form-title">Leave a review</h3>
+
+      <form class="review-form" id="reviewForm">
+
+        <div class="form-row">
+
+          <div class="field">
+            <label for="reviewName">Your Name</label>
+            <input id="reviewName" type="text" required placeholder="Enter your name">
+          </div>
+
+          <div class="field">
+            <label for="reviewService">Service Used</label>
+            <select id="reviewService">
+              <option>Accounting & Bookkeeping</option>
+              <option>Income Tax</option>
+              <option>GST Services</option>
+              <option>Audit & Assurance</option>
+              <option>Company Secretary Services</option>
+              <option>Financial Advisory</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="field">
+          <label>Rating</label>
+          <div class="star-rating" id="starRating" role="radiogroup" aria-label="Rating out of 5">
+            <span class="star" tabindex="0" role="radio" aria-label="1 star" data-value="1">★</span>
+            <span class="star" tabindex="0" role="radio" aria-label="2 stars" data-value="2">★</span>
+            <span class="star" tabindex="0" role="radio" aria-label="3 stars" data-value="3">★</span>
+            <span class="star" tabindex="0" role="radio" aria-label="4 stars" data-value="4">★</span>
+            <span class="star" tabindex="0" role="radio" aria-label="5 stars" data-value="5">★</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="reviewMessage">Your Review</label>
+          <textarea id="reviewMessage" required placeholder="Share your experience..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary form-submit">
+          Submit Review →
+        </button>
+
+        <p id="reviewStatus"></p>
+
+      </form>
+
+    </div>
 
   </section>
 
@@ -3277,7 +3481,7 @@ With more than three years of professional experience and 30+ clients handled, e
 
 
   <!-- =========================================================
-       PAYMENT DETAILS MODAL (NEW)
+       PAYMENT DETAILS MODAL
   ========================================================= -->
 
   <div class="payment-modal-overlay" id="paymentModalOverlay">
@@ -3742,7 +3946,140 @@ With more than three years of professional experience and 30+ clients handled, e
 
 
   <!-- =========================================================
-       RAZORPAY CHECKOUT (NEW)
+       REVIEWS (shared via /api/reviews + Supabase)
+  ========================================================= -->
+
+<script>
+
+  /* Reviews are now shared across every visitor via /api/reviews (Supabase),
+     instead of being stored per-browser in localStorage. */
+
+  function escapeHtml(str) {
+    const div = document.createElement("div");
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  async function loadReviews() {
+    const grid = document.getElementById("reviewGrid");
+
+    try {
+      const res = await fetch("/api/reviews");
+      const data = await res.json();
+      const reviews = data.reviews || [];
+
+      grid.innerHTML = "";
+
+      if (reviews.length === 0) {
+        grid.innerHTML = '<p style="color:var(--ink-faint); grid-column:1/-1;">Be the first to leave a review.</p>';
+        return;
+      }
+
+      reviews.forEach(function (review) {
+        const stars = "★".repeat(review.rating) + "☆".repeat(5 - review.rating);
+
+        const card = document.createElement("article");
+        card.className = "review-card reveal visible";
+        card.innerHTML = `
+          <div class="review-stars">${stars}</div>
+          <p class="review-quote">${escapeHtml(review.message)}</p>
+          <div class="review-author">${escapeHtml(review.name)}</div>
+          <div class="review-role">${escapeHtml(review.service || "")}</div>
+        `;
+        grid.appendChild(card);
+      });
+
+    } catch (error) {
+      console.error("Could not load reviews:", error);
+      grid.innerHTML = '<p style="color:var(--ink-faint); grid-column:1/-1;">Reviews could not be loaded right now.</p>';
+    }
+  }
+
+  loadReviews();
+
+  /* Star rating input */
+
+  let currentRating = 0;
+  const starEls = document.querySelectorAll("#starRating .star");
+
+  function setRating(value) {
+    currentRating = value;
+    starEls.forEach(function (star) {
+      star.classList.toggle("filled", parseInt(star.dataset.value, 10) <= value);
+    });
+  }
+
+  starEls.forEach(function (star) {
+    star.addEventListener("click", function () {
+      setRating(parseInt(star.dataset.value, 10));
+    });
+    star.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        setRating(parseInt(star.dataset.value, 10));
+      }
+    });
+  });
+
+  /* Review form submission */
+
+  const reviewForm = document.getElementById("reviewForm");
+  const reviewStatus = document.getElementById("reviewStatus");
+
+  reviewForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("reviewName").value.trim();
+    const service = document.getElementById("reviewService").value;
+    const message = document.getElementById("reviewMessage").value.trim();
+
+    if (!name || !message || currentRating === 0) {
+      reviewStatus.style.display = "block";
+      reviewStatus.style.color = "#B5533F";
+      reviewStatus.innerText = "Please add your name, a star rating and a short review.";
+      return;
+    }
+
+    const submitButton = reviewForm.querySelector("button[type='submit']");
+    submitButton.disabled = true;
+    submitButton.innerText = "Submitting...";
+
+    try {
+      const res = await fetch("/api/reviews", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, service, rating: currentRating, message }),
+      });
+
+      const result = await res.json();
+
+      if (!res.ok) throw new Error(result.error || "Submission failed");
+
+      await loadReviews();
+
+      reviewStatus.style.display = "block";
+      reviewStatus.style.color = "#3F7A57";
+      reviewStatus.innerText = "Thank you for your review!";
+
+      reviewForm.reset();
+      setRating(0);
+
+    } catch (error) {
+      console.error("Review submission error:", error);
+      reviewStatus.style.display = "block";
+      reviewStatus.style.color = "#B5533F";
+      reviewStatus.innerText = "Something went wrong. Please try again.";
+    } finally {
+      submitButton.disabled = false;
+      submitButton.innerText = "Submit Review →";
+    }
+  });
+
+</script>
+
+
+  <!-- =========================================================
+       RAZORPAY CHECKOUT
   ========================================================= -->
 
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
